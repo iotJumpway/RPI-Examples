@@ -78,6 +78,8 @@ Take some time to ensure your Raspberry Pi firmware and packages are up to date.
 
 Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs") to retrieve your connection credentials and update the config.json file with your new credentials.
 
+![TechBubble IoT JumpWay Docs](../../images/Basic-LED/Device-Creation.png)  
+
 
 ```
 	"IoTJumpWaySettings": {
@@ -101,9 +103,7 @@ Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](h
 
 ## Execute The Program
 
-    ```
-    $ sudo python/python3 Basic-Led.py
-    ```
+    $ sudo python/python3 Basic-Led.py 
 
 ## IoT JumpWay Raspberry Pi Examples Bugs/Issues
 
