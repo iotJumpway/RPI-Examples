@@ -43,18 +43,18 @@ class BasicLED():
         jsonData = json.loads(payload.decode("utf-8"))
         
         if jsonData['ActuatorID']==self.configs["Sensors"]["LED"]["ID"] and jsonData['Command']=='TOGGLE' and jsonData['CommandValue']=='ON':
-
-			GPIO.output(
-				self.configs["Sensors"]["LED"]["PIN"],
-				GPIO.HIGH
-			)
             
-        elif jsonData['ActuatorID']==self.configs["Sensors"]["LED"]["ID"] and jsonData['Command']=='TOGGLE' and jsonData['CommandValue']=='OFF':
+            GPIO.output(
+                self.configs["Sensors"]["LED"]["PIN"],
+                GPIO.HIGH
+            )
 
-			GPIO.output(
-				self.configs["Sensors"]["LED"]["PIN"],
-				GPIO.LOW
-			)
+        elif jsonData['ActuatorID']==self.configs["Sensors"]["LED"]["ID"] and jsonData['Command']=='TOGGLE' and jsonData['CommandValue']=='OFF':
+            
+            GPIO.output(
+                self.configs["Sensors"]["LED"]["PIN"],
+                GPIO.LOW
+            )
             
     def startMQTT(self):
         
@@ -70,8 +70,8 @@ class BasicLED():
 			})
             
         except Exception as e:
-			print(str(e))
-			sys.exit()
+            print(str(e))
+            sys.exit()
             
         self.JumpWayMQTTClient.connectToDevice()
         self.JumpWayMQTTClient.subscribeToDeviceChannel("Commands")
@@ -85,11 +85,11 @@ while True:
 		"Commands",
 		{
 			"Actuator":"LED",
-			"ActuatorID":BasicLED.configs["Sensors"]["LED"]["ID"],
+            "ActuatorID":str(BasicLED.configs["Sensors"]["LED"]["ID"]),
 			"Command":"TOGGLE",
 			"CommandValue":"ON"
 		}
-	)
+    )
     
     time.sleep(5)
     
@@ -97,11 +97,11 @@ while True:
 		"Commands",
 		{
 			"Actuator":"LED",
-			"ActuatorID":BasicLED.configs["Sensors"]["LED"]["ID"],
+			"ActuatorID":str(BasicLED.configs["Sensors"]["LED"]["ID"]),
 			"Command":"TOGGLE",
 			"CommandValue":"OFF"
 		}
-	)
+    )
     
     time.sleep(5)
     
