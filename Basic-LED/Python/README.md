@@ -1,6 +1,6 @@
 # IoT JumpWay Raspberry Pi Examples
 
-![TechBubble IoT JumpWay Docs](../images/main/IoT-Jumpway.jpg)  
+![TechBubble IoT JumpWay Docs](../../images/main/IoT-Jumpway.jpg)  
 
 ## Introduction
 
