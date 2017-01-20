@@ -63,7 +63,15 @@ Take some time to ensure your Raspberry Pi firmware and packages are up to date.
 
 ## Setting Up Your Raspberry Pi
 
-- First of all you need to connect up an LED to your Raspberry Pi. To connect the LED you will need a breadboard, 1 LED, 1 resistor and two jumper wires. Connect the LED to pin 18 of your Raspberry Pi and add the sensor ID for the LED that you attached to your device in the Sensors->LED->ID value in config.json. 
+- First of all you need to connect up an LED to your Raspberry Pi. To connect the LED you will need a breadboard, 1 LED, 1 resistor and two jumper wires. Connect the LED to pin 18 of your Raspberry Pi. 
+
+## Connection Credentials & Sensor Settings
+
+- Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs") to set up your device. 
+
+![TechBubble IoT JumpWay Docs](../../images/Basic-LED/Device-Creation.png)  
+
+- Retrieve your connection credentials and update the config.json file with your new connection  credentials and sensor setting.
 
 ```
 	"Sensors": {
@@ -73,13 +81,6 @@ Take some time to ensure your Raspberry Pi firmware and packages are up to date.
 		}
 	}
 ```
-
-## Connection Credentials
-
-Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs") to retrieve your connection credentials and update the config.json file with your new credentials.
-
-![TechBubble IoT JumpWay Docs](../../images/Basic-LED/Device-Creation.png)  
-
 
 ```
 	"IoTJumpWaySettings": {
