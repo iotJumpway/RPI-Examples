@@ -14,6 +14,12 @@ The Raspberry Pi examples provide example projects that you can use to get start
 
 - [Computer Vision Python Example](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/tree/master/Computer-Vision/python "Computer Vision Python Example")
 
+## IoT JumpWay Raspberry Pi Examples Docs
+
+- [Raspberry Pi 3 Preparation Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/1-Raspberry-Pi-Prep.md "Raspberry Pi 3 Preparation Doc")
+
+- [Raspberry Pi 3 OpenCV Installation Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Raspberry Pi 3 OpenCV Installation Doc")
+
 ## IoT JumpWay Raspberry Pi Examples Bugs/Issues
 
 Please feel free to create issues for bugs and general issues you come accross whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
