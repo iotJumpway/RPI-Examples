@@ -1,6 +1,6 @@
 # IoT JumpWay Raspberry Pi Basic LED Example
 
-![TechBubble IoT JumpWay Docs](../../images/main/IoT-Jumpway.jpg)  
+![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/main/IoT-Jumpway.jpg)  
 
 ## Introduction
 
@@ -19,9 +19,13 @@ If this is the first time you have used the TechBubble IoT JumpWay in your IoT p
 
 ## Hardware requirements
 
+![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Basic-LED/Hardware.jpg)  
+
 1. Raspberry Pi.
 2. 1 x LED.
-3. 1 x Breadboard
+3. 1 x 220 ohm Resistor
+4. 2 x Jumper Wires
+5. 1 x Breadboard
 
 ## Software requirements
 
@@ -56,20 +60,25 @@ Take some time to ensure your Raspberry Pi firmware and packages are up to date.
 
 ## Install Requirements
 
-    ```
     $ pip install --upgrade pip
     $ pip install -r requirements.txt
-    ```
 
 ## Setting Up Your Raspberry Pi
 
-- First of all you need to connect up an LED to your Raspberry Pi. To connect the LED you will need a breadboard, 1 LED, 1 resistor and two jumper wires. Connect the LED to pin 18 of your Raspberry Pi. 
+![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Basic-LED/Hardware.jpg)  
+
+First of all you need to connect up an LED to your Raspberry Pi. To connect the LED you will need a breadboard, a 220 ohm resistor, and two jumper wires. 
+
+1. Place the LED on your breadboard.
+2. Connect the short leg of the LED to pin 18 of your Raspberry Pi using a jumper wire.
+3. Connect one end of the resistor to the long leg of your LED.
+4. Connect the other end of the resistor to the 3v output of the Raspberry Pi.
 
 ## Connection Credentials & Sensor Settings
 
-- Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs") to set up your device. 
+- Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Device Doc-](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/blob/master/4-Location-Devices.md "TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Device Doc") to set up your device. 
 
-![TechBubble IoT JumpWay Docs](../../images/Basic-LED/Device-Creation.png)  
+![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Basic-LED/Device-Creation.png)  
 
 - Retrieve your connection credentials and update the config.json file with your new connection  credentials and sensor setting.
 
