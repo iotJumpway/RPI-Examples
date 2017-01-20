@@ -82,13 +82,13 @@ BasicLED = BasicLED()
 while True:
     
     BasicLED.JumpWayMQTTClient.publishToDeviceChannel(
-        "Commands",
-        {
-            "Actuator":"LED",
-            "ActuatorID":str(BasicLED.configs["Sensors"]["LED"]["ID"]),
-            "Command":"TOGGLE",
-            "CommandValue":"ON"
-        }
+		"Commands",
+		{
+			"Actuator":"LED",
+			"ActuatorID":str(BasicLED.configs["Sensors"]["LED"]["ID"]),
+			"Command":"TOGGLE",
+			"CommandValue":"ON"
+		}
     )
     
     time.sleep(5)
