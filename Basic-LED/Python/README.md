@@ -65,7 +65,7 @@ Take some time to ensure your Raspberry Pi firmware and packages are up to date.
 
 ## Setting Up Your Raspberry Pi
 
-![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Basic-LED/Hardware.jpg)  
+![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Basic-LED/Blinking.jpg)  
 
 First of all you need to connect up an LED to your Raspberry Pi. To connect the LED you will need a breadboard, a 220 ohm resistor, and two jumper wires. 
 
