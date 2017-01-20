@@ -11,3 +11,9 @@ The Raspberry Pi examples provide example projects that you can use to get start
 ## IoT JumpWay Raspberry Pi Examples Bugs/Issues
 
 Please feel free to create issues for bugs and general issues you come accross whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
+
+## IoT JumpWay Raspberry Pi Examples Contributors
+
+- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
+
+- [Andrej Petelin, TechBubble Technologies Dev](https://github.com/AndrejPetelin "Andrej Petelin, TechBubble Technologies Dev")
