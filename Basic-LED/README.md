@@ -44,12 +44,37 @@ Take some time to ensure your Raspberry Pi firmware and packages are up to date.
 
 ## Setting Up Your Raspberry Pi
 
-- First of all you need to connect up an LED to your Raspberry Pi. To connect the LED you will need a breadboard, 1 LED, 1 resistor and two jumper wires. Connect the LED to pin 18 of your Raspberry Pi or change the following line to reflect which pin your LED is connected to. 
+- First of all you need to connect up an LED to your Raspberry Pi. To connect the LED you will need a breadboard, 1 LED, 1 resistor and two jumper wires. Connect the LED to pin 18 of your Raspberry Pi and add the sensor ID for the LED that you attached to your device in the Sensors->LED->ID value in config.json. 
 
 ```
-actuator1Pin = 18
+	"Sensors": {
+		"LED": {
+			"ID": 0,
+			"PIN": 18
+		}
+	}
 ```
 
 ## Connection Credentials
 
-Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs") to retrieve your connection credentials and update the configs.json file with your new credentials.
+Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs") to retrieve your connection credentials and update the config.json file with your new credentials.
+
+
+```
+	"IoTJumpWaySettings": {
+		"SystemLocation": 0,
+		"SystemZone": 0,
+		"SystemDeviceID": 0,
+		"SystemDeviceName" : "Your Device Name"
+	}
+```
+
+
+```
+	"IoTJumpWayMQTTSettings": {
+		"host": "https://iot.techbubbletechnologies.com",
+		"port": "8883",
+		"username": "Your MQTT Username",
+		"password": "Your MQTT Password"
+	}
+```
