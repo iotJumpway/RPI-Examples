@@ -86,9 +86,9 @@ while True:
 		{
 			"Actuator":"LED",
             "ActuatorID":str(BasicLED.configs["Sensors"]["LED"]["ID"]),
-			"Command":"TOGGLE",
+            "Command":"TOGGLE",
 			"CommandValue":"ON"
-		}
+        }
     )
     
     time.sleep(5)
