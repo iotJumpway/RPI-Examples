@@ -12,7 +12,7 @@ The Raspberry Pi examples provide example projects that you can use to get start
 
 - [Basic LED Python Example](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/tree/master/Basic-LED/Python "Basic LED Python Example")
 
-- [Computer Vision Python Example](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/tree/master/Computer-Vision/python "Computer Vision Python Example")
+- [Computer Vision Python Example](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/tree/master/Computer-Vision/Python "Computer Vision Python Example")
 
 ## IoT JumpWay Raspberry Pi Examples Docs
 
