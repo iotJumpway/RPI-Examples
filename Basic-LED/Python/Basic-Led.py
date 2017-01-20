@@ -85,7 +85,7 @@ while True:
 		"Commands",
 		{
 			"Actuator":"LED",
-			"ActuatorID":str(BasicLED.configs["Sensors"]["LED"]["ID"]),
+			"ActuatorID":BasicLED.configs["Sensors"]["LED"]["ID"],
 			"Command":"TOGGLE",
 			"CommandValue":"ON"
 		}
@@ -97,7 +97,7 @@ while True:
 		"Commands",
 		{
 			"Actuator":"LED",
-			"ActuatorID":str(BasicLED.configs["Sensors"]["LED"]["ID"]),
+			"ActuatorID":BasicLED.configs["Sensors"]["LED"]["ID"],
 			"Command":"TOGGLE",
 			"CommandValue":"OFF"
 		}
