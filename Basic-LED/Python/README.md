@@ -12,6 +12,11 @@ If this is the first time you have used the TechBubble IoT JumpWay in your IoT p
 
 [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs")
 
+## Python Versions
+
+- 2.7
+- 3
+
 ## Hardware requirements
 
 1. Raspberry Pi.
@@ -92,6 +97,13 @@ Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](h
 		"password": "Your MQTT Password"
 	}
 ```
+
+
+## Execute The Program
+
+    ```
+    $ sudo python/python3 Basic-Led.py
+    ```
 
 ## IoT JumpWay Raspberry Pi Examples Bugs/Issues
 
