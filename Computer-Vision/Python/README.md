@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Here you will find sample device scripts for connecting Raspberry Pi to the TechBubble Technologies IoT JumpWay using the Python MQTT Library and OpenCV for computer vision. The codes allow you to set up a basic device that allows you to train a Haarcascades model, detect recognised / unknown people, monitor the camera in near realtime via a stream, and communicate with the IoT JumpWay sending sensor and warning messages. Once you understand how it works you are free to add as many actuators and sensors to your device and modify your code accordingly.
+Here you will find sample device scripts for connecting a Raspberry Pi 3 to the TechBubble Technologies IoT JumpWay using the Python MQTT Library for communication and OpenCV for computer vision. The codes allow you to set up a basic device that allows you to train a Haarcascades model, detect recognised / unknown people, optionally monitor the camera in near realtime via a stream, and communicate with the IoT JumpWay sending sensor and warning messages. Once you understand how it works you are free to add as many actuators and sensors to your device and modify your code accordingly.
 
 This example was our original version of TASS, since our move forward with more advanced computer vision libraries and frameworks, we decided to open up the source code.
 
@@ -39,16 +39,25 @@ Take some time to ensure your Raspberry Pi firmware and packages are up to date,
 
 [Raspberry Pi 3 Preparation Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/1-Raspberry-Pi-Prep.md "Raspberry Pi 3 Preparation Doc")
 
-## Install Requirements
+## Cloning The Repo
 
-    $ pip install --upgrade pip
-    $ pip install -r requirements.txt
+You will need to clone this repository to a location on your Raspberry Pi 3. Navigate to the directory you would like to download it to and issue the following commands.
+
+    $ git clone https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples.git
 
 ## Installing Open CV
 
 You will need to install OpenCV for this example to work, please follow the document below to install OpenCV on your Raspberry Pi 3.
 
 [Raspberry Pi 3 OpenCV Installation Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Raspberry Pi 3 OpenCV Installation Doc")
+
+## Install Requirements
+
+Next you will need to navigate to the Computer-Vision directory and install the requirements
+
+    $ cd IoT-JumpWay-RPI-Examples/Computer-Vision/Python
+    $ pip install --upgrade pip
+    $ pip install -r requirements.txt
 
 ## Video Stream
 
