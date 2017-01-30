@@ -6,6 +6,7 @@
 	"AppServerSettings":{
 		"serverOn":0,
 		"serverIP":"YOUR RPI 3 IP",
+		"serverPort":"YOUR PORT NUMBER",
 		"serverUser":"YOUR SERVER USERNAME",
 		"serverPassword":"YOUR SERVER PASSWORD"
 	},

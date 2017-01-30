@@ -109,4 +109,4 @@ class ImageServerThread(threading.Thread):
             else:
                 return send_file(io.BytesIO(self.__prevData), attachment_filename="disp.jpg", mimetype="image/jpg")
               
-        app.run(host=self._configs["AppServerSettings"]["serverIP"], port=4326, debug=False, ssl_context=CONTEXT)
+        app.run(host=self._configs["AppServerSettings"]["serverIP"], port=self._configs["AppServerSettings"]["serverPort"], debug=False, ssl_context=CONTEXT)
