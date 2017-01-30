@@ -61,7 +61,7 @@ First of all you need to connect up an LED to your Raspberry Pi. To connect the 
 3. Connect one end of the resistor to the long leg of your LED.
 4. Connect the other end of the resistor to the 3v output of the Raspberry Pi.
 
-## Device / Appliction Connection Credentials & Sensor Settings
+## Device / Application Connection Credentials & Sensor Settings
 
 - Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Device Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/blob/master/4-Location-Devices.md "TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Device Doc") to set up your device, and the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Application Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/blob/master/5-Location-Applications.md "TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Application Doc") to set up your application. 
 
@@ -100,7 +100,7 @@ First of all you need to connect up an LED to your Raspberry Pi. To connect the 
 	}
 ```
 
-## Execute The Programss
+## Execute The Programs
 
     $ sudo python/python3 Basic-Led-Device.py 
     $ sudo python/python3 Basic-Led-Application.py 
