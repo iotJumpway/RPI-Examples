@@ -25,7 +25,7 @@ This example was our original version of TASS, since our move forward with more 
 
 ## Hardware requirements
 
-![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Computer-Vision/Hardware.jpg)  
+![IoT JumpWay Raspberry Pi Computer Vision Example Docs](../../images/Computer-Vision/Hardware.jpg)  
 
 1. Raspberry Pi.
 2. Linux Compatible Webcam
@@ -66,7 +66,7 @@ Next you will need to navigate to the Computer-Vision directory and install the 
 
 - Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Device Doc-](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/blob/master/4-Location-Devices.md "TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Device Doc") to set up your device. 
 
-![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Computer-Vision/Device-Creation.png)  
+![IoT JumpWay Raspberry Pi Computer Vision Example Docs](../../images/Computer-Vision/Device-Creation.png)  
 
 - Retrieve your connection credentials and update the config.json file with your new connection credentials and camera setting.
 
@@ -91,7 +91,7 @@ Next you will need to navigate to the Computer-Vision directory and install the 
 
 ## Video Stream
 
-The video stream is off by default, to turn on the video stream update the AppServerSettings settings in config.json. The video stream requires SSL, follow the in the next step that explains how to set up your domain name and SSL to point to your Raspberry Pi 3. 
+The video stream is off by default, to turn on the video stream update the AppServerSettings settings in config.json. The video stream requires SSL, follow the next step that explains how to set up your domain name and SSL to point to your Raspberry Pi 3. 
 
 ```
 	"AppServerSettings":{
@@ -116,7 +116,19 @@ Once you have built up your folder of images, head over to TASS.py and change li
 
 Once the processing stage has finished, your new model will automatically start training, once training is finished, it will automatically run the main facial recognition program. Put your face in front of your connected webcam and watch the output of the program as it tries to identify who you are. 
 
-## Execute The Program
+## Viewing Your Data  
+
+Each time your device detects a person or an intruder, it will send data to the [TechBubble IoT JumpWay](https://iot.techbubbletechnologies.com/ "TechBubble IoT JumpWay"). You will be able to access the data in the [TechBubble IoT JumpWay Developers Area](https://iot.techbubbletechnologies.com/developers/dashboard/ "TechBubble IoT JumpWay Developers Area"). Once you have logged into the Developers Area, visit the [TechBubble IoT JumpWay Location Devices Page](https://iot.techbubbletechnologies.com/developers/location-devices "Location Devices page"), find your device and then visit the Sensor/Actuator page and the Warnings page to view the data sent from your device.
+
+![IoT JumpWay Raspberry Pi Computer Vision Example Docs](../../images/Computer-Vision/SensorData.png)
+
+![IoT JumpWay Raspberry Pi Computer Vision Example Docs](../../images/Computer-Vision/WarningData.png)
+
+## Autonomous Device Communication
+
+COMING SOON
+
+## Executing The Program
 
     $ sudo python/python3 TASS.py 
 
