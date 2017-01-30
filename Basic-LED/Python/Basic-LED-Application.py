@@ -34,8 +34,8 @@ class BasicLEDApplication():
             
             self.JumpWayMQTTClient = techbubbleiotjumpwaymqtt.application.JumpWayPythonMQTTApplicationConnection({
 				"locationID": self.configs["IoTJumpWaySettings"]["SystemLocation"],  
-				"applicationID": self.configs["IoTJumpWaySettings"]["SystemDeviceID"], 
-				"applicationName": self.configs["IoTJumpWaySettings"]["SystemDeviceName"], 
+				"applicationID": self.configs["IoTJumpWaySettings"]["SystemApplicationID"], 
+				"applicationName": self.configs["IoTJumpWaySettings"]["SystemApplicationName"], 
 				"username": self.configs["IoTJumpWayMQTTSettings"]["applicationUsername"], 
 				"password": self.configs["IoTJumpWayMQTTSettings"]["applicationPassword"]
 			})

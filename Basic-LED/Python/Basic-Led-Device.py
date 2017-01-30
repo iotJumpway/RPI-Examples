@@ -42,17 +42,17 @@ class BasicLED():
         
         jsonData = json.loads(payload.decode("utf-8"))
         
-        if jsonData['ActuatorID']==self.configs["Sensors"]["LED"]["ID"] and jsonData['Command']=='TOGGLE' and jsonData['CommandValue']=='ON':
+        if jsonData['ActuatorID']==self.configs["Actuators"]["LED"]["ID"] and jsonData['Command']=='TOGGLE' and jsonData['CommandValue']=='ON':
             
             GPIO.output(
-                self.configs["Sensors"]["LED"]["PIN"],
+                self.configs["Actuators"]["LED"]["PIN"],
                 GPIO.HIGH
             )
 
-        elif jsonData['ActuatorID']==self.configs["Sensors"]["LED"]["ID"] and jsonData['Command']=='TOGGLE' and jsonData['CommandValue']=='OFF':
+        elif jsonData['ActuatorID']==self.configs["Actuators"]["LED"]["ID"] and jsonData['Command']=='TOGGLE' and jsonData['CommandValue']=='OFF':
             
             GPIO.output(
-                self.configs["Sensors"]["LED"]["PIN"],
+                self.configs["Actuators"]["LED"]["PIN"],
                 GPIO.LOW
             )
             
