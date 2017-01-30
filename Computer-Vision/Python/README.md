@@ -102,9 +102,32 @@ The video stream is off by default, to turn on the video stream update the AppSe
 	}
 ```
 
-## Setup Domain Name For Your Raspberry Pi 3
+## Setup Domain Name & SSL For Your Raspberry Pi 3
 
-COMING SOON
+For the video stream to work securely, you will need to set up a domain name that is pointed to your Raspberry Pi and you will also need to set up an SSL certificate to ensure that the server used for streaming the video is secure. The following document explains how to do this, if in doubt ask your registrar or host to assist you. If you cloned this repository to your home directory, the paths that you need to use for your CSR and key generation in the following tutorial are:
+
+```
+	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/key.key
+
+```
+
+and
+
+```
+	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/csr.csr 
+
+```
+
+Once you have received your signed .crt file from certificate authority, you need to upload it to:
+
+```
+	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/crt.crt 
+
+```
+
+[Setup Domain Name & SSL For Your Raspberry Pi 3](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi 3")
+
+Once you have completed the steps in the above document, SFTP your 
 
 ## Training Your Data
 
