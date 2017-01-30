@@ -1,1 +1,1 @@
-techbubbleiotjumpwaymqtt==0.3.2
+techbubbleiotjumpwaymqtt>=0.3.7
