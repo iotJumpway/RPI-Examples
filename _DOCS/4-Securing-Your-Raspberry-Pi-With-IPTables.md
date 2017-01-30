@@ -1,4 +1,4 @@
-# Setup Domain Name & SSL For Your Raspberry Pi 3
+# Securing Your Raspberry Pi With IPTables
 
 ![TechBubble IoT JumpWay Docs](../images/main/IoT-Jumpway.jpg)  
 
