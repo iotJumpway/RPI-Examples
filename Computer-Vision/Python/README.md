@@ -91,7 +91,7 @@ Next you will need to navigate to the Computer-Vision directory and install the 
 
 ## Video Stream
 
-The video stream is off by default, to turn on the video stream update the AppServerSettings settings in config.json. The video stream requires SSL, follow the next step that explains how to set up your domain name and SSL to point to your Raspberry Pi 3. 
+The video stream is off by default, to turn on the video stream update the AppServerSettings settings in config.json. The video stream requires SSL, follow the next step that explains how to set up your domain name and SSL to point to your Raspberry Pi 3. The server needs to run with Python 3, if not issues will occur when people connect.
 
 ```
 	"AppServerSettings":{
