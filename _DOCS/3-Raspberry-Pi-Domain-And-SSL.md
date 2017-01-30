@@ -21,13 +21,13 @@ To help ensure that data passed between your Raspberry Pi 3 and any connecting w
 
 6. Set up a port forward from your router to the local IP address of your Raspberry Pi 3.
 
-7. Login to your Raspberry Pi via SSH and generate an RSA key and a CSR that will be used to activate your SSL certificate. Use the following command to generate your RSA key:
+7. Login to your Raspberry Pi via SSH and generate an RSA key and a CSR that will be used to activate your SSL certificate. Use the following command to generate your RSA key. If you have come to this document via a tutorial for our example projects, the tutorial will tell you the path to use below:
 
     ```
     $ openssl genrsa -out ~/PATH_TO_YOUR_CERT_FOLDER/YOUR_KEY_FILE.key 2048
     ```
 
-8. Use the following command to generate your CSR:
+8. Use the following command to generate your CSR. If you have come to this document via a tutorial for our example projects, the tutorial will tell you the path to use below:
 
     ```
     $ openssl req -new -sha256 -key ~/PATH_TO_YOUR_CERT_FOLDER/YOUR_KEY_FILE.key -out ~/PATH_TO_YOUR_CERT_FOLDER/YOUR_CSR_FILE.csr
@@ -38,4 +38,4 @@ To help ensure that data passed between your Raspberry Pi 3 and any connecting w
 
 10. Head over to where you bought the SSL certificate from and activate your SSL cert using the CSR you generated on your Raspberry Pi, once verified you will receive your SSL certificate files.
 
-11. Connect to your Raspberry Pi using SFTP, for this I always WinSCP on Windows but you can use FileZilla or the FTP client of your choice. Once connected upload your SSL cert files to your certs folder specified in the related guide for the project you are setting up.
+11. Connect to your Raspberry Pi using SFTP, for this I always WinSCP on Windows but you can use FileZilla or the FTP client of your choice. Once connected, upload your SSL .crt file to the certs folder specified in the related guide for the project you are setting up.
