@@ -103,13 +103,16 @@ while True:
 
 				print("Person " + str(label) + " Confidence " +str(confidence))
 			
-				if(TASS.config["AppSettings"]["sendMQTT"]==1):
+				if(TASS.configs["AppSettings"]["sendMQTT"]==1):
 
-					TASS.JumpWayMQTTClient.publishToDeviceSensors({
-						"Sensor":"CCTV",
-						"SensorID":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
-						"SensorValue":"USER: " + label
-					})
+					TASS.JumpWayMQTTClient.publishToDeviceChannel(
+						"Sensors",
+						{
+							"Sensor":"CCTV",
+							"SensorID":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
+							"SensorValue":"USER: " + label
+						}
+					)
 
 			else:
 
@@ -117,18 +120,24 @@ while True:
 
 				if(TASS.configs["AppSettings"]["sendMQTT"]==1):
 
-					TASS.JumpWayMQTTClient.publishToDeviceSensors({
-						"Sensor":"CCTV",
-						"SensorID":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
-						"SensorValue":"NOT RECOGNISED"
-					})
+					TASS.JumpWayMQTTClient.publishToDeviceChannel(
+						"Sensors",
+						{
+							"Sensor":"CCTV",
+							"SensorID":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
+							"SensorValue":"NOT RECOGNISED"
+						}
+					)
 
-					TASS.JumpWayMQTTClient.publishToDeviceWarnings({
-						"WarningType":"CCTV",
-						"WarningOrigin":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
-						"WarningValue":"Intruder",
-						"WarningMessage":"An intruder has been detected"
-					})
+					TASS.JumpWayMQTTClient.publishToDeviceChannel(
+						"Warnings",
+						{
+							"WarningType":"CCTV",
+							"WarningOrigin":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
+							"WarningValue":"Intruder",
+							"WarningMessage":"An intruder has been detected"
+						}
+					)
 
 			time.sleep(1)
 		
