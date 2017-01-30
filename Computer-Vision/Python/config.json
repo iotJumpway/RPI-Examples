@@ -1,0 +1,37 @@
+{
+	"AppSettings":{
+		"armed":1,
+		"sendMQTT":1
+	},
+	"AppServerSettings":{
+		"serverOn":0,
+		"serverIP":"YOUR RPI 3 IP",
+		"serverUser":"YOUR SERVER USERNAME",
+		"serverPassword":"YOUR SERVER PASSWORD"
+	},
+	"IoTJumpWaySettings": {
+		"SystemLocation": 0,
+		"SystemZone": 0,
+		"SystemDeviceID": 0,
+		"SystemDeviceName" : "Your Device Name",
+		"SystemCameraID":0
+	},
+	"IoTJumpWayMQTTSettings": {
+		"host": "https://iot.techbubbletechnologies.com",
+		"port": "8883",
+		"username": "Your MQTT Username",
+		"password": "Your MQTT Password"
+	},
+	"ClassifierSettings":{
+		"HAAR_FACES": "Haarcascades/haarcascade_frontalface_default.xml",
+		"HAAR_FACES2": "Haarcascades/haarcascade_frontalface_alt.xml",
+		"HAAR_FACES3": "Haarcascades/haarcascade_frontalface_alt2.xml",
+		"HAAR_PROFILES": "Haarcascades/haarcascade_profileface.xml",
+		"HAAR_SCALE_FACTOR": 1.3,
+		"HAAR_MIN_NEIGHBORS":4,
+		"Model":"model/TASSModel.xml",
+		"predictionThreshold":3000.0,  
+		"height":112,
+		"width": 92
+	}
+}
