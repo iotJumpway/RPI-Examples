@@ -121,13 +121,17 @@ and
 Once you have received your signed .crt file from certificate authority, you need to upload it to:
 
 ```
-	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/crt.crt 
+	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/crt.csr 
 
 ```
 
 [Setup Domain Name & SSL For Your Raspberry Pi 3](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi 3")
 
-Once you have completed the steps in the above document, SFTP your 
+## Securing Your Raspberry Pi With IPTables
+
+The next security step you should take is setting up IPTables, the following tutorial will show you how:
+
+[Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
 
 ## Training Your Data
 
