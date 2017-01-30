@@ -74,4 +74,4 @@ while True:
     
     time.sleep(5)
     
-BasicLED.JumpWayMQTTClient.disconnectFromDevice()
+BasicLED.JumpWayMQTTClient.disconnectFromApplication()
