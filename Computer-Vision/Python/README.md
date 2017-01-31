@@ -15,7 +15,7 @@ This example was our original version of TASS, since our move forward with more 
 - 2.7
 - 3.4 or above
 
-## Software requirements
+## Software Requirements
 
 1. Jessie
 2. TechBubbleIoTJumpWayMQTT  
@@ -143,6 +143,10 @@ Once you have built up your folder of images, head over to TASS.py and change li
 
 Once the processing stage has finished, your new model will automatically start training, once training is finished, it will automatically run the main facial recognition program. Put your face in front of your connected webcam and watch the output of the program as it tries to identify who you are. 
 
+## Executing The Program
+
+    $ sudo python/python3 TASS.py 
+
 ## Viewing Your Data  
 
 Each time your device detects a person or an intruder, it will send data to the [TechBubble IoT JumpWay](https://iot.techbubbletechnologies.com/ "TechBubble IoT JumpWay"). You will be able to access the data in the [TechBubble IoT JumpWay Developers Area](https://iot.techbubbletechnologies.com/developers/dashboard/ "TechBubble IoT JumpWay Developers Area"). Once you have logged into the Developers Area, visit the [TechBubble IoT JumpWay Location Devices Page](https://iot.techbubbletechnologies.com/developers/location-devices "Location Devices page"), find your device and then visit the Sensor/Actuator page and the Warnings page to view the data sent from your device.
@@ -155,13 +159,17 @@ Each time your device detects a person or an intruder, it will send data to the 
 
 COMING SOON
 
-## Executing The Program
-
-    $ sudo python/python3 TASS.py 
-
 ## IoT JumpWay Raspberry Pi Computer Vision Example Bugs/Issues
 
 Please feel free to create issues for bugs and general issues you come accross whilst using the IoT JumpWay Raspberry Pi Computer Vision Example. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Computer Vision Example in your IoT projects.
+
+## IoT JumpWay Raspberry Pi Examples Contributors
+
+![Adam Milton-Barker,  Intel Software Innovator](../../images/main/Intel-Software-Innovator.jpg)  
+
+- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
+
+- [Andrej Petelin, TechBubble Technologies Dev](https://github.com/AndrejPetelin "Andrej Petelin, TechBubble Technologies Dev")
 
 
 
