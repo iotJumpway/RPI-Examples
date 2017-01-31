@@ -110,7 +110,7 @@ while True:
 						{
 							"Sensor":"CCTV",
 							"SensorID":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
-							"SensorValue":"USER: " + label
+							"SensorValue":"USER: " + str(label)
 						}
 					)
 
