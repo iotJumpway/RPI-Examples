@@ -30,7 +30,7 @@ Please feel free to create issues for bugs and general issues you come accross w
 
 ## IoT JumpWay Raspberry Pi Examples Contributors
 
-![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  
+![Adam Milton-Barker,  Intel Software Innovator](images/main/Intel-Software-Innovator.jpg)  
 
 - [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
 
