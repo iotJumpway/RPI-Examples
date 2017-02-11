@@ -6,7 +6,7 @@
 
 Here you will find an index of the documentation and tutorials available in the IoT JumpWay Raspberry Pi Documentation & Tutorials
 
-## IoT JumpWay Raspberry Pi Examples Docs
+## IoT JumpWay Raspberry Pi Documentation & Tutorials
 
 - [Raspberry Pi Preparation Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/1-Raspberry-Pi-Prep.md "Raspberry Pi Preparation Doc")
 
@@ -16,11 +16,11 @@ Here you will find an index of the documentation and tutorials available in the 
 
 - [Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
 
-## IoT JumpWay Raspberry Pi Examples Bugs/Issues
+## IoT JumpWay Raspberry Pi Documentation & Tutorials Bugs/Issues
 
 Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
 
-## IoT JumpWay Raspberry Pi Examples Contributors
+## IoT JumpWay Raspberry Pi Documentation & Tutorials Contributors
 
 - [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
 
