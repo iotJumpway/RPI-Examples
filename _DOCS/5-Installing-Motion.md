@@ -17,11 +17,12 @@ PLEASE NOTE:
 
 ## Guide
 
-1. Update your packages:
+1. Update your packages and install Motion:
 
     ```
         $ sudo apt-get update
         $ sudo apt-get upgrade
+        $ sudo apt-get install motion
     ```
 
 2. Execute the following to open up the configuration file:
