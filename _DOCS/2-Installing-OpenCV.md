@@ -1,14 +1,14 @@
-# Installation Of OpenCV On Raspberry Pi 3
+# Installation Of OpenCV On Raspberry Pi
 
-![TechBubble IoT JumpWay Docs](../images/main/IoT-Jumpway.jpg)  
+![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 ## Introduction
 
-The following information will help you install OpenCV on your Raspberry Pi 3. This installation includes the additional modules required for facial identification.
+The following information will help you install OpenCV on your Raspberry Pi. This installation includes the additional modules required for facial identification.
 
 ## Hardware Requirements
 
-1. Raspberry Pi 3.
+1. Raspberry Pi.
 2. 16 GB Card
 
 ## Software Requirements

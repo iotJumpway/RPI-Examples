@@ -1,11 +1,11 @@
 
-# Setup Domain Name & SSL For Your Raspberry Pi 3
+# Setup Domain Name & SSL For Your Raspberry Pi
 
-![TechBubble IoT JumpWay Docs](../images/main/IoT-Jumpway.jpg)  
+![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 ## Introduction
 
-To help ensure that data passed between your Raspberry Pi 3 and any connecting web services is encrypted an important thing to do is to add SSL encryption to your requests. The following information will help you setup a domain name for your Raspberry Pi, forward the domain to your device IP, and secure the connection with SSL.
+To help ensure that data passed between your Raspberry Pi and any connecting web services is encrypted an important thing to do is to add SSL encryption to your requests. The following information will help you setup a domain name for your Raspberry Pi, forward the domain to your device IP, and secure the connection with SSL.
 
 ## Guide
 
@@ -19,7 +19,7 @@ To help ensure that data passed between your Raspberry Pi 3 and any connecting w
 
 5. Once your domain is installed on your server, find and edit the domain zone file to include a sub domain that uses an A record to point to the static IP of your local network.
 
-6. Set up a port forward from your router to the local IP address of your Raspberry Pi 3.
+6. Set up a port forward from your router to the local IP address of your Raspberry Pi.
 
 7. Login to your Raspberry Pi via SSH and generate an RSA key and a CSR that will be used to activate your SSL certificate. Use the following command to generate your RSA key. If you have come to this document via a tutorial for our example projects, the tutorial will tell you the path to use below:
 

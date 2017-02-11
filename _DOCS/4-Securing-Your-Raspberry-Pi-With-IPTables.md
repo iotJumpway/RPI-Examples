@@ -1,6 +1,6 @@
 # Securing Your Raspberry Pi With IPTables
 
-![TechBubble IoT JumpWay Docs](../images/main/IoT-Jumpway.jpg)  
+![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)  
 
 ## Introduction
 

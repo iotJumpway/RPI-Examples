@@ -1,6 +1,6 @@
 # Preparing your Raspberry Pi
 
-![TechBubble IoT JumpWay Docs](../images/main/IoT-Jumpway.jpg)  
+![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)  
 
 ## Introduction
 
@@ -10,7 +10,7 @@ The following information will help you setup and secure your Raspberry Pi.
 
 ![IoT JumpWay Raspberry Pi Basic LED Example Docs](../images/Basic-LED/Hardware.jpg)  
 
-1. Raspberry Pi 3.
+1. Raspberry Pi.
 2. 16 GB Card
 
 ## Software Requirements
