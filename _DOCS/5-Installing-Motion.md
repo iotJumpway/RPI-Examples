@@ -90,7 +90,7 @@ PLEASE NOTE:
         start_motion_daemon = yes
     ```
 
-8. Check Linux Motion is working, execute the following command and then navigate to YOUR_INTEL_EDISON_IP:8081 
+8. Check Linux Motion is working, execute the following command and then navigate to YOUR_RPI_IP:8081 
 
     ```
         sudo service motion start
