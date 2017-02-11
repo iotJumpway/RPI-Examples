@@ -8,10 +8,7 @@ The following information will help you setup and secure your Raspberry Pi.
 
 ## Hardware Requirements
 
-![IoT JumpWay Raspberry Pi Basic LED Example Docs](../images/Basic-LED/Hardware.jpg)  
-
 1. Raspberry Pi.
-2. 16 GB Card
 
 ## Software Requirements
 
