@@ -1,10 +1,12 @@
 # IoT JumpWay Raspberry Pi Basic LED Example
 
-![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/main/IoT-Jumpway.jpg)  
+![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Basic-LED/Raspberry-Pi-Basic-LED-Example.png)  
 
 ## Introduction
 
-Here you will find sample device scripts for connecting Raspberry Pi to the TechBubble Technologies IoT JumpWay using the Python MQTT Library. The codes allow you to set up a basic device that allows control of an LED, and an application to communicate with the device and make the LED flash on and off. Once you understand how it works you are free to add as many actuators and sensors to your device and modify your code accordingly.
+Here you will find sample device scripts for connecting a Raspberry Pi to the TechBubble Technologies IoT JumpWay using the Python MQTT Library.
+
+This tutorial will help you to set up a Raspberry Pi that allows control of an LED, and also an application that can control the LED via the IoT JumpWay.
 
 ## Python Versions
 
@@ -14,7 +16,6 @@ Here you will find sample device scripts for connecting Raspberry Pi to the Tech
 ## Software Requirements
 
 1. TechBubbleIoTJumpWayMQTT  
-2. JSon
 
 ## Hardware requirements
 
@@ -28,7 +29,7 @@ Here you will find sample device scripts for connecting Raspberry Pi to the Tech
 
 ## Before You Begin
 
-If this is the first time you have used the TechBubble IoT JumpWay in your IoT projects, you will require a developer account and some basics to be set up before you can start creating your IoT devices. Visit the following link and check out the guides that take you through registration and setting up your Location Space, Zones, Devices and Applications.
+If this is the first time you have used the TechBubble IoT JumpWay in your IoT projects, you will require a developer account and some basics to be set up before you can start creating your IoT devices. Visit the following link and check out the guides that take you through registration and setting up your Location Space, Zones, Devices and Applications (About 5 minutes read).
 
 [TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs")
 
@@ -107,7 +108,7 @@ First of all you need to connect up an LED to your Raspberry Pi. To connect the 
 
 ## Viewing Your Data  
 
-Each time your device detects a person or an intruder, it will send data to the [TechBubble IoT JumpWay](https://iot.techbubbletechnologies.com/ "TechBubble IoT JumpWay"). You will be able to access the data in the [TechBubble IoT JumpWay Developers Area](https://iot.techbubbletechnologies.com/developers/dashboard/ "TechBubble IoT JumpWay Developers Area"). Once you have logged into the Developers Area, visit the [TechBubble IoT JumpWay Location Devices Page](https://iot.techbubbletechnologies.com/developers/location-devices "Location Devices page"), find your device and then visit the Sensor/Actuator page and the Warnings page to view the data sent from your device.
+Each command sent to the device is stored in the [TechBubble IoT JumpWay](https://iot.techbubbletechnologies.com/ "TechBubble IoT JumpWay"). You will be able to access the data in the [TechBubble IoT JumpWay Developers Area](https://iot.techbubbletechnologies.com/developers/dashboard/ "TechBubble IoT JumpWay Developers Area"). Once you have logged into the Developers Area, visit the [TechBubble IoT JumpWay Location Devices Page](https://iot.techbubbletechnologies.com/developers/location-devices "Location Devices page"), find your device and then visit the Commands Data page to view the data sent from your device.
 
 ![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Basic-LED/SensorData.png)
 
@@ -115,10 +116,10 @@ Each time your device detects a person or an intruder, it will send data to the 
 
 ## IoT JumpWay Raspberry Pi Examples Bugs/Issues
 
-Please feel free to create issues for bugs and general issues you come accross whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
+Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
 
 ## IoT JumpWay Raspberry Pi Examples Contributors
 
-![Adam Milton-Barker,  Intel Software Innovator](../../images/main/Intel-Software-Innovator.jpg)  
-
 - [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
+
+![Adam Milton-Barker,  Intel Software Innovator](../../images/main/Intel-Software-Innovator.jpg)  
