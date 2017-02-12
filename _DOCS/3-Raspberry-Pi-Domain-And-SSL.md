@@ -39,3 +39,13 @@ To help ensure that data passed between your Raspberry Pi and any connecting web
 10. Head over to where you bought the SSL certificate from and activate your SSL cert using the CSR you generated on your Raspberry Pi, once verified you will receive your SSL certificate files.
 
 11. Connect to your Raspberry Pi using SFTP, for this I always WinSCP on Windows but you can use FileZilla or the FTP client of your choice. Once connected, upload your SSL .crt file to the certs folder specified in the related guide for the project you are setting up.
+
+## IoT JumpWay Raspberry Pi Documentation & Tutorials Bugs/Issues
+
+Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
+
+## IoT JumpWay Raspberry Pi Documentation & Tutorials Contributors
+
+- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
+
+![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  

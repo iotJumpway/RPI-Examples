@@ -101,3 +101,13 @@ If youa re going to have your Raspberry Pi accessible via the outside world, the
     ```
 
 9. Reboot your Raspberry Pi and your firewall should boot up on startup everytime now.
+
+## IoT JumpWay Raspberry Pi Documentation & Tutorials Bugs/Issues
+
+Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
+
+## IoT JumpWay Raspberry Pi Documentation & Tutorials Contributors
+
+- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
+
+![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  
