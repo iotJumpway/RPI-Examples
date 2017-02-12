@@ -67,11 +67,13 @@ In addition OpenCv needs to be installed, follow the [Installing OpenCV On Your 
 
 ## Connection Credentials & Sensor Settings
 
-- Follow the [TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Device Doc-](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/blob/master/4-Location-Devices.md "TechBubble Technologies IoT JumpWay Developer Program (BETA) Location Device Doc") to set up your device. 
+The next steps will be to setup your device instance in the IoT JumpWay Developer Console.
+
+- Follow the [IoT JumpWay Location Device Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/blob/master/4-Location-Devices.md "IoT JumpWay Location Device Doc") to set up your device. You will need to set up a device that has a CCTV Camera added via the Sensors/Actuators section.
 
 ![IoT JumpWay Raspberry Pi Computer Vision Example Docs](../../images/Computer-Vision/Device-Creation.png)  
 
-- Retrieve your connection credentials and update the config.json file with your new connection credentials and camera setting.
+- Retrieve your connection credentials and update the config.json file with your new connection credentials and camera ID setting (You will need to go into the device page after creating it to get your correct camera ID).
 
 ```
 	"IoTJumpWaySettings": {
@@ -85,8 +87,6 @@ In addition OpenCv needs to be installed, follow the [Installing OpenCV On Your 
 
 ```
 	"IoTJumpWayMQTTSettings": {
-		"host": "https://iot.techbubbletechnologies.com",
-		"port": "8883",
 		"username": "Your MQTT Username",
 		"password": "Your MQTT Password"
 	}
