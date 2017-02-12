@@ -1,12 +1,16 @@
-# IoT JumpWay Raspberry Pi Computer Vision Example (TASS)
+# Facial Recognition & Identification on Raspberry Pi
 
-![TechBubble Autonomous Sight System](img/TASS-Banner.png) 
+![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Computer-Vision/Raspberry-Pi-Computer-Vision-Example.png)  
 
 ## Introduction
+Facial recognition and identification will soon be playing a major role in our every day lives. The technology opens up a whole new world of possibilities, and applies to almost every aspect of our lives. Use cases of facial recognition/identification include security systems, authentication systems, personalised smart homes, and home care assistants.
 
-Here you will find sample device scripts for connecting a Raspberry Pi 3 to the TechBubble Technologies IoT JumpWay using the Python MQTT Library for communication and OpenCV for computer vision. 
+## What Will We Build?
+This tutorial will help you to build a Raspberry Pi that allows you to train a Haarcascades model, detect recognised/unknown people, optionally monitor the camera in near realtime via a stream, and communicate with the IoT JumpWay sending sensor and warning messages that will allow your device to autonomously communicate with other IoT devices on your IoT JumpWay network.
 
-The codes allow you to set up a basic device that allows you to train a Haarcascades model, detect recognised / unknown people, optionally monitor the camera in near realtime via a stream, and communicate with the IoT JumpWay sending sensor and warning messages. Once you understand how it works you are free to add as many actuators and sensors to your device and modify your code accordingly.
+This tutorial will use TechBubble Technologies IoT JumpWay Python MQTT Library for communication and OpenCV for computer vision.
+
+(Tutorial to be updated soon to include our new streaming method)
 
 This example was our original version of TASS, since our move forward with more advanced computer vision libraries and frameworks, we decided to open up the source code.
 
@@ -18,9 +22,8 @@ This example was our original version of TASS, since our move forward with more 
 ## Software Requirements
 
 1. Jessie
-2. TechBubbleIoTJumpWayMQTT  
-3. JSon
-4. Flask
+2. [TechBubble IoT JumpWay Python MQTT Client](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Python-MQTT-Clients "TechBubble IoT JumpWay Python MQTT Client")  
+3. Flask
 5. Flask-Basicauth
 
 ## Hardware requirements
@@ -32,27 +35,23 @@ This example was our original version of TASS, since our move forward with more 
 
 ## Before You Begin
 
-If this is the first time you have used the TechBubble IoT JumpWay in your IoT projects, you will require a developer account and some basics to be set up before you can start creating your IoT devices. Visit the following link and check out the guides that take you through registration and setting up your Location Space, Zones, Devices and Applications.
+There are a few tutorials that you should follow before beginning, especially if it is the first time you have followed any of our Raspberry Pi tutorials or if it is the first time you have used the TechBubble IoT JumpWay Developer Program.
 
-[TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "TechBubble Technologies IoT JumpWay Developer Program (BETA) Docs")
+- [IoT JumpWay Developer Program Docs (5-10 minute read/setup)](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "IoT JumpWay Developer Program Docs (5-10 minute read/setup)")
 
-## Preparing Your Raspberry Pi 3
+- [Preparing Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/1-Raspberry-Pi-Prep.md "Preparing Your Raspberry Pi")
 
-Take some time to ensure your Raspberry Pi firmware and packages are up to date, and that your device is secure by following the guide below.
+- [Installing OpenCV On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Installing OpenCV On Your Raspberry Pi")
 
-[Raspberry Pi 3 Preparation Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/1-Raspberry-Pi-Prep.md "Raspberry Pi 3 Preparation Doc")
+- [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi")
+
+- [Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
 
 ## Cloning The Repo
 
-You will need to clone this repository to a location on your Raspberry Pi 3. Navigate to the directory you would like to download it to and issue the following commands.
+You will need to clone the TechBubble IoT JumpWay Raspberry Pi Examples repository to a location on your Raspberry Pi. Navigate to the directory you would like to download it to and issue the following commands, easiest is to download it to your home directory.
 
     $ git clone https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples.git
-
-## Installing Open CV
-
-You will need to install OpenCV for this example to work, please follow the document below to install OpenCV on your Raspberry Pi 3.
-
-[Raspberry Pi 3 OpenCV Installation Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Raspberry Pi 3 OpenCV Installation Doc")
 
 ## Install Requirements
 
@@ -61,6 +60,10 @@ Next you will need to navigate to the Computer-Vision directory and install the 
     $ cd IoT-JumpWay-RPI-Examples/Computer-Vision/Python
     $ pip install --upgrade pip
     $ pip install -r requirements.txt
+
+## Installing Open CV
+
+In addition OpenCv needs to be installed, follow the [Installing OpenCV On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Installing OpenCV On Your Raspberry Pi") tutorial to accomplish this, this is the computer vision library we will be using.
 
 ## Connection Credentials & Sensor Settings
 
@@ -91,7 +94,7 @@ Next you will need to navigate to the Computer-Vision directory and install the 
 
 ## Video Stream
 
-The video stream is off by default, to turn on the video stream update the AppServerSettings settings in config.json. The video stream requires SSL, follow the next step that explains how to set up your domain name and SSL to point to your Raspberry Pi 3. The server needs to run with Python 3, if not issues will occur when people connect.
+The video stream is off by default, to turn on the video stream update the AppServerSettings settings in config.json. The video stream requires SSL, follow the next step that explains how to set up your domain name and SSL to point to your Raspberry Pi. The server needs to run with Python 3, if not issues will occur when people connect.
 
 ```
 	"AppServerSettings":{
@@ -102,7 +105,7 @@ The video stream is off by default, to turn on the video stream update the AppSe
 	}
 ```
 
-## Setup Domain Name & SSL For Your Raspberry Pi 3
+## Setup Domain Name & SSL For Your Raspberry Pi
 
 For the video stream to work securely, you will need to set up a domain name that is pointed to your Raspberry Pi and you will also need to set up an SSL certificate to ensure that the server used for streaming the video is secure. The following document explains how to do this, if in doubt ask your registrar or host to assist you. If you cloned this repository to your home directory, the paths that you need to use for your CSR and key generation in the following tutorial are:
 
@@ -125,7 +128,7 @@ Once you have received your signed .crt file from certificate authority, you nee
 
 ```
 
-[Setup Domain Name & SSL For Your Raspberry Pi 3](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi 3")
+
 
 ## Securing Your Raspberry Pi With IPTables
 
