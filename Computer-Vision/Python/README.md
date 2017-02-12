@@ -78,21 +78,28 @@ We will use Linux Motion to stream a live feed to a local port on the Raspberry 
 We like to make sure that we try to provide tutorials that will help people learn to create secure projects. For the video stream to work securely, you will need to set up a domain name that is pointed to your Raspberry Pi, you will also need to set up an SSL certificate to ensure that the server used for streaming the video is secure. The [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi") tutorial explains how to do this, if in doubt ask your registrar or host to assist you. If you cloned this repository to your home directory, the paths that you need to use for your CSR and key generation in the following tutorial are:
 
 ```
-	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/key.key
+	/etc/nginx/key.key
 
 ```
 
 and
 
 ```
-	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/csr.csr 
+	/etc/nginx/csr.csr 
 
 ```
 
-Once you have received your signed .crt file from certificate authority, you need to upload it to:
+Once you have received your signed crt.crt and ca.crt file from certificate authority, you need to upload them to:
 
 ```
-	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/crt.csr 
+	/etc/nginx/ca.crt
+
+```
+
+and
+
+```
+	/etc/nginx/csr.csr 
 
 ```
 
