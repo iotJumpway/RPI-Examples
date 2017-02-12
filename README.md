@@ -10,17 +10,21 @@ The Raspberry Pi examples provide example projects that you can use to get start
 
 ## IoT JumpWay Raspberry Pi Examples
 
-- [Basic LED Python Example](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/tree/master/Basic-LED/Python "Basic LED Python Example")
+- [Basic: Basic LED Python Example](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/tree/master/Basic-LED/Python "Basic: Basic LED Python Example")
 
-- [Computer Vision Python Example](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/tree/master/Computer-Vision/Python "Computer Vision Python Example")
+- [Computer Vision: Facial Recognition & Identification Python Example](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/tree/master/Computer-Vision/Python "Computer Vision: Facial Recognition & Identification Python Example")
 
 ## IoT JumpWay Raspberry Pi Examples Docs
 
-- [Raspberry Pi Preparation Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/1-Raspberry-Pi-Prep.md "Raspberry Pi Preparation Doc")
-
-- [Raspberry Pi OpenCV Installation Doc](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Raspberry Pi OpenCV Installation Doc")
+- [Preparing Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/1-Raspberry-Pi-Prep.md "Preparing Your Raspberry Pi")
 
 - [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi")
+
+- [Installing OpenCV On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Installing OpenCV On Your Raspberry Pi")
+
+- [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/5-Installing-Motion.md "Installing Linux Motion On Your Raspberry Pi")
+
+- [Installing Secure Nginx Server For Linux Motion On Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/6-Secure-Nginx-Server-For-Motion.md "Installing Secure Nginx Server For Linux Motion On Raspberry Pi")
 
 - [Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
 
