@@ -10,8 +10,6 @@ This tutorial will help you to build a Raspberry Pi that allows you to train a H
 
 This tutorial will use TechBubble Technologies IoT JumpWay Python MQTT Library for communication, OpenCV for computer vision, Motion to stream the webcame on a local port and a secure Nginx server so that the stream can be accessed safely from the outside world.
 
-(Tutorial to be updated soon to include our new streaming method)
-
 This example was our original version of TASS, since our move forward with more advanced computer vision libraries and frameworks, we decided to open up the source code.
 
 ## Python Versions
