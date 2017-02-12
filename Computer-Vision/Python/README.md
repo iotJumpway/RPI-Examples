@@ -71,6 +71,12 @@ OpenCv needs to be installed, follow the [Installing OpenCV On Your Raspberry Pi
 
 We will use Linux Motion to stream a live feed to a local port on the Raspberry Pi which OpenCv will connect to and read in the frames from the stream. To get Linux Motion set up, follow the [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/5-Installing-Motion.md "Installing Linux Motion On Your Raspberry Pi") tutorial.
 
+There are some modifications to make here, in section 9 of the Motion tutorial, it tells you how to modify the directory where the media is saved, for this tutorial you should change that settings to:
+
+	/home/YOURUSERNAME/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/media
+
+Don't forget to check out section 10 with regards to turning off the saving of images to save diskspace.
+
 ## Setup Domain Name & SSL For Your Raspberry Pi
 
 We like to make sure that we try to provide tutorials that will help people learn to create secure projects. For the video stream to work securely, you will need to set up a domain name that is pointed to your Raspberry Pi, you will also need to set up an SSL certificate to ensure that the server used for streaming the video is secure. The [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi") tutorial explains how to do this, if in doubt ask your registrar or host to assist you. If you cloned this repository to your home directory, the paths that you need to use for your CSR and key generation in the following tutorial are:
@@ -173,6 +179,8 @@ You can add as many images as you like (Dependant on the space available on your
 Once you have built up your folder of images, head over to TASS.py and change line 34 (self.train = 0) to self.train = 1 and the start the program. The program will loop through your images and if it detects a face it will recreate an image in the format required for the model, save it to a matching folder in the processed directory, and delete the original image to save space. If it does not detect a face it will simply delete the original image as it is useless for the facial recognition. 
 
 Once the processing stage has finished, your new model will automatically start training, once training is finished, it will automatically run the main facial recognition program. Put your face in front of your connected webcam and watch the output of the program as it tries to identify who you are. 
+
+NOTE: Remove the README file from  the processing directory.
 
 ## Executing The Program
 
