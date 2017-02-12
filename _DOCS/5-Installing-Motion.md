@@ -9,7 +9,7 @@ The following information will help you install Linux Motion on your Raspberry P
 PLEASE NOTE: 
 
 - This is a basic tutorial that will result in an insecure stream, in project tutorials where we use Linux Motion, we will take you through creating a secure stream. 
-- Motion will store images and videos on your Raspberry Pi, if you do not keep on top of them your diskspace will quickly fill up. 
+- Motion will store images and videos on your Raspberry Pi, if you do not keep on top of them your diskspace will quickly fill up, check out section 10 of this guide for more info. 
 
 ## Hardware Requirements
 
@@ -77,25 +77,41 @@ PLEASE NOTE:
         target_dir 
     ```
 
-10. Close the file and save your changes.
+    If you change this value you should make sure you have given the correct permissions for Motion:
 
-11. Execute the following to open up the daemon configuration:  
+    ```
+        chgrp motion PATH_TO_YOUR_DIRECTORY
+        chmod g+rwx PATH_TO_YOUR_DIRECTORY
+        chmod -R g+w PATH_TO_YOUR_DIRECTORY
+    ```
+
+10. Using Motion with the default settings will result in images being saved to the target_dir which will eventually use up all of your diskspace. If you would like to turn this feature off so that only videos are saved, find and edit the following line: 
+
+    ```
+        output_pictures off
+    ```
+
+11. Close the file and save your changes.
+
+12. Execute the following to open up the daemon configuration:  
 
     ```
         $ sudo nano /etc/default/motion
     ```
 
-5. Make the following change: 
+13. Make the following change: 
 
     ```
         start_motion_daemon = yes
     ```
 
-8. Check Linux Motion is working, execute the following command and then navigate to YOUR_RPI_IP:8081 
+14. Check Linux Motion is working, execute the following command and then navigate to YOUR_RPI_IP:8081 
 
     ```
         sudo service motion start
     ```
+
+These are just some settings that we think will be useful to you, review the full motion.conf file for all possible settings.
 
 ## IoT JumpWay Intel® Edison Examples Document Contributors
 
