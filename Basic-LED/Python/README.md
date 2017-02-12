@@ -3,7 +3,7 @@
 ![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Basic-LED/Raspberry-Pi-Basic-LED-Example.png)  
 
 ## Introduction
-Facial recognition and identification will soon be playing a major role in our every day lives. The technology opens up a whole new world of possibilities, and applies to almost every aspect of our lives. Use cases of facial recognition/identification include security systems, authentication systems, personalised smart homes, and home care assistants.
+Want to take your first steps into the magical world of the Internet of Things, or want to find out how easy it is to use the IoT JumpWay as your secure IoT communication platform? This tutorial is for you an will hold your hand through setting up your first Raspberry Pi project powered by the TechBubble IoT JumpWay.
 
 ## What Will We Build?
 
