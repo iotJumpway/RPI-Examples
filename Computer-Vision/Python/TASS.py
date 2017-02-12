@@ -37,10 +37,16 @@ class TASS():
 			self.configs = json.loads(configs.read())
 			
 		self.startMQTT()
-		self.OpenCVCapture = cv2.VideoCapture(0)
-		
-		if self.configs["AppServerSettings"]["serverOn"]:
-			TassCore.startImageServer()
+
+		print("LOADING VIDEO CAMERA")
+
+		#self.OpenCVCapture = cv2.VideoCapture(0)
+		self.OpenCVCapture = cv2.VideoCapture()
+		self.OpenCVCapture.open('http://'+self.configs["StreamSettings"]["streamIP"]+':'+self.configs["StreamSettings"]["streamPort"]+'/stream.mjpg')
+
+		self.OpenCVCapture.set(5, 30) 
+		self.OpenCVCapture.set(3,1280)
+		self.OpenCVCapture.set(4,720)
 		
 	def deviceCommandsCallback(self,topic,payload):
 		
@@ -102,42 +108,38 @@ while True:
 			if label:
 
 				print("Person " + str(label) + " Confidence " +str(confidence))
-			
-				if(TASS.configs["AppSettings"]["sendMQTT"]==1):
 
-					TASS.JumpWayMQTTClient.publishToDeviceChannel(
-						"Sensors",
-						{
-							"Sensor":"CCTV",
-							"SensorID":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
-							"SensorValue":"USER: " + str(label)
-						}
-					)
+				TASS.JumpWayMQTTClient.publishToDeviceChannel(
+					"Sensors",
+					{
+						"Sensor":"CCTV",
+						"SensorID":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
+						"SensorValue":"USER: " + str(label)
+					}
+				)
 
 			else:
 
 				print("Person not recognised " + str(label) + " Confidence "+str(confidence));
 
-				if(TASS.configs["AppSettings"]["sendMQTT"]==1):
+				TASS.JumpWayMQTTClient.publishToDeviceChannel(
+					"Sensors",
+					{
+						"Sensor":"CCTV",
+						"SensorID":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
+						"SensorValue":"NOT RECOGNISED"
+					}
+				)
 
-					TASS.JumpWayMQTTClient.publishToDeviceChannel(
-						"Sensors",
-						{
-							"Sensor":"CCTV",
-							"SensorID":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
-							"SensorValue":"NOT RECOGNISED"
-						}
-					)
-
-					TASS.JumpWayMQTTClient.publishToDeviceChannel(
-						"Warnings",
-						{
-							"WarningType":"CCTV",
-							"WarningOrigin":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
-							"WarningValue":"Intruder",
-							"WarningMessage":"An intruder has been detected"
-						}
-					)
+				TASS.JumpWayMQTTClient.publishToDeviceChannel(
+					"Warnings",
+					{
+						"WarningType":"CCTV",
+						"WarningOrigin":TASS.configs["IoTJumpWaySettings"]["SystemCameraID"],
+						"WarningValue":"Intruder",
+						"WarningMessage":"An intruder has been detected"
+					}
+				)
 
 			time.sleep(1)
 		

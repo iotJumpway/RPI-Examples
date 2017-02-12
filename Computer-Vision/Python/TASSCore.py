@@ -20,29 +20,13 @@ import fnmatch
 import json
 from datetime import datetime
 
-from TASSImageServer import ImageServerThread
-
 class TassCore():
 
     def __init__(self):	
 
         with open('config.json') as configs:   
 
-            self._configs = json.loads(configs.read());
-            
-        if self._configs["AppServerSettings"]["serverOn"]:
-            self.__imgServer = ImageServerThread("img/unavailable.jpg")
-    
-    def startImageServer(self):
-        self.__imgServer.start()
-
-    def serveFrame(self, frame):
-        
-        if self.__imgServer.active():
-            return self.__imgServer.write(frame)
-        else:
-            print("Image server not running!")
-            return None
+            self._configs = json.loads(configs.read())
             
     def captureAndDetect(self,frame):
 
@@ -89,33 +73,11 @@ class TassCore():
 
         if len(faces):
 
-            cv2.imwrite(currentImage, frame)
-
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(frame,datetime.now().strftime("%Y-%m-%d %H:%M"),(10,450), font, 1,(255,255,255),2)
-            cv2.putText(frame,"TASS Face V1.0",(10,40), font, 1,(255,255,255),2)
-
-            for (x, y, w, h) in faces:
-
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-
-            ignore, jpeg = cv2.imencode(".jpg", frame)
-            self.serveFrame(bytearray(jpeg))
-
-            return currentImage, faces[0]
+            return frame, faces[0]
 
         else:
 
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(frame,datetime.now().strftime("%Y-%m-%d %H:%M"),(10,450), font, 1,(255,255,255),2)
-            cv2.putText(frame,"TASS Face V1.0",(10,40), font, 1,(255,255,255),2)
-
-            ignore, jpeg = cv2.imencode(".jpg", frame)
-            self.serveFrame(bytearray(jpeg))
-
-            cv2.imwrite(currentImage, frame)
-
-            return currentImage, None   
+            return frame, None   
 
     def resize(self,image):
 
