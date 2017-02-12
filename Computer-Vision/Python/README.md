@@ -8,7 +8,7 @@ Facial recognition and identification will soon be playing a major role in our e
 ## What Will We Build?
 This tutorial will help you to build a Raspberry Pi that allows you to train a Haarcascades model, detect recognised/unknown people, optionally monitor the camera in near realtime via a stream, and communicate with the IoT JumpWay sending sensor and warning messages that will allow your device to autonomously communicate with other IoT devices on your IoT JumpWay network.
 
-This tutorial will use TechBubble Technologies IoT JumpWay Python MQTT Library for communication and OpenCV for computer vision.
+This tutorial will use TechBubble Technologies IoT JumpWay Python MQTT Library for communication, OpenCV for computer vision, Motion to stream the webcame on a local port and a secure Nginx server so that the stream can be accessed safely from the outside world.
 
 (Tutorial to be updated soon to include our new streaming method)
 
@@ -46,6 +46,10 @@ There are a few tutorials that you should follow before beginning, especially if
 - [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi")
 
 - [Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
+
+- [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/5-Installing-Motion.md "Installing Linux Motion On Your Raspberry Pi")
+
+- [Installing Secure Nginx Server For Linux Motion On Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/6-Secure-Nginx-Server-For-Motion.md "Installing Secure Nginx Server For Linux Motion On Raspberry Pi")
 
 ## Cloning The Repo
 
