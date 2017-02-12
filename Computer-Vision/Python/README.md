@@ -79,33 +79,65 @@ We like to make sure that we try to provide tutorials that will help people lear
 
 ```
 	/etc/nginx/key.key
-
 ```
 
 and
 
 ```
 	/etc/nginx/csr.csr 
-
 ```
 
 Once you have received your signed crt.crt and ca.crt file from certificate authority, you need to upload them to:
 
 ```
 	/etc/nginx/ca.crt
-
 ```
 
 and
 
 ```
 	/etc/nginx/csr.csr 
-
 ```
 
 ## Installing A Secure Nginx Server For Linux Motion
 
 We will use Nginx as our server solution and set it up in a way that it has a Grade A+ SSL rating on Qualys SSL Labs SSL Report. To do this we have provided a guide in the [Installing Secure Nginx Server For Linux Motion On Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/6-Secure-Nginx-Server-For-Motion.md "Installing Secure Nginx Server For Linux Motion On Raspberry Pi"), follow this tutorial to set up your server. You will need of completed the [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/5-Installing-Motion.md "Installing Linux Motion On Your Raspberry Pi") and [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi") tutorials before starting this step.  
+
+## Securing Your Raspberry Pi With IPTables
+
+The next security step you should take is setting up IPTables, the following tutorial will show you how:
+
+[Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
+
+## Video Stream
+
+Once you have followed the above steps, if they are not already running you need to do the following in this order:
+
+1. Start Linux Motion:
+
+```
+	$ sudo service motion start  
+```
+
+OR:
+
+```
+	$ sudo /etc/init.d/motion start 
+```
+
+2. Start Nginx:
+
+```
+	$ sudo service nginx start  
+```
+
+OR:
+
+```
+	$ sudo /etc/init.d/nginx start
+```
+
+IMPORTANT: This way of streaming is a new feature and we are still ironing out some kinks, if you would like to have OpenCV access the webcam directly and not have Motion/Nginx streaming, uncomment line 43 in TASS.py and comment out lines 44 and 45. 
 
 ## Connection Credentials & Sensor Settings
 
@@ -133,50 +165,6 @@ The next steps will be to setup your device instance in the IoT JumpWay Develope
 		"password": "Your MQTT Password"
 	}
 ```
-
-## Video Stream
-
-The video stream is off by default, to turn on the video stream update the AppServerSettings settings in config.json. The video stream requires SSL, follow the next step that explains how to set up your domain name and SSL to point to your Raspberry Pi. The server needs to run with Python 3, if not issues will occur when people connect.
-
-```
-	"AppServerSettings":{
-		"serverOn":1,
-		"serverIP":"YOUR RPI 3 IP",
-		"serverUser":"YOUR SERVER USERNAME",
-		"serverPassword":"YOUR SERVER PASSWORD"
-	}
-```
-
-## Setup Domain Name & SSL For Your Raspberry Pi
-
-For the video stream to work securely, you will need to set up a domain name that is pointed to your Raspberry Pi and you will also need to set up an SSL certificate to ensure that the server used for streaming the video is secure. The following document explains how to do this, if in doubt ask your registrar or host to assist you. If you cloned this repository to your home directory, the paths that you need to use for your CSR and key generation in the following tutorial are:
-
-```
-	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/key.key
-
-```
-
-and
-
-```
-	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/csr.csr 
-
-```
-
-Once you have received your signed .crt file from certificate authority, you need to upload it to:
-
-```
-	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/crt.csr 
-
-```
-
-
-
-## Securing Your Raspberry Pi With IPTables
-
-The next security step you should take is setting up IPTables, the following tutorial will show you how:
-
-[Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
 
 ## Training Your Data
 
