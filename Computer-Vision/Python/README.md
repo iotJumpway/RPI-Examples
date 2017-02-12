@@ -23,8 +23,6 @@ This example was our original version of TASS, since our move forward with more 
 
 1. Jessie
 2. [TechBubble IoT JumpWay Python MQTT Client](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Python-MQTT-Clients "TechBubble IoT JumpWay Python MQTT Client")  
-3. Flask
-5. Flask-Basicauth
 
 ## Hardware requirements
 
@@ -96,7 +94,7 @@ Once you have received your signed crt.crt and ca.crt file from certificate auth
 and
 
 ```
-	/etc/nginx/csr.csr 
+	/etc/nginx/crt.crt 
 ```
 
 ## Installing A Secure Nginx Server For Linux Motion
