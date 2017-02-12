@@ -184,17 +184,21 @@ NOTE: Remove the README file from  the processing directory.
 
     $ sudo python/python3 TASS.py 
 
+## Autonomous IoT Communication
+
+Each time your device detects a person, the device will send sensor data to the  [TechBubble IoT JumpWay](https://iot.techbubbletechnologies.com/ "TechBubble IoT JumpWay") and warning alerts will be sent when the motion sensor picks up an intruder. You can use sensor values and warning messages to trigger autonomous communication with other devices you have connected to your IoT JumpWay Location Space. 
+
+On the device edit page, scroll down to the "Create Rules" section under the "Actuators / Sensors". Here you can use the dropdown menu to create rules that allow your device to email you or to autonomously communicate with other devices on its network in the event of status updates, sensor data and warnings.
+
+![IoT JumpWay  IoT JumpWay Intel® Arduino/Genuino 101 DFRobot LCD Intruder System Example Docs](../../images/main/Device-Autonomous-Communication.png)
+
 ## Viewing Your Data  
 
-Each time your device detects a person or an intruder, it will send data to the [TechBubble IoT JumpWay](https://iot.techbubbletechnologies.com/ "TechBubble IoT JumpWay"). You will be able to access the data in the [TechBubble IoT JumpWay Developers Area](https://iot.techbubbletechnologies.com/developers/dashboard/ "TechBubble IoT JumpWay Developers Area"). Once you have logged into the Developers Area, visit the [TechBubble IoT JumpWay Location Devices Page](https://iot.techbubbletechnologies.com/developers/location-devices "Location Devices page"), find your device and then visit the Sensor/Actuator page and the Warnings page to view the data sent from your device.
+You will be able to access the data in the [TechBubble IoT JumpWay Developers Area](https://iot.techbubbletechnologies.com/developers/dashboard/ "TechBubble IoT JumpWay Developers Area"). Once you have logged into the Developers Area, visit the [TechBubble IoT JumpWay Location Devices Page](https://iot.techbubbletechnologies.com/developers/location-devices "Location Devices page"), find your device and then visit the "Sensor/Actuator Data" page and the "Commands Data" page to view the data sent from your device.
 
 ![IoT JumpWay Raspberry Pi Computer Vision Example Docs](../../images/Computer-Vision/SensorData.png)
 
 ![IoT JumpWay Raspberry Pi Computer Vision Example Docs](../../images/Computer-Vision/WarningData.png)
-
-## Autonomous Device Communication
-
-COMING SOON
 
 ## IoT JumpWay Raspberry Pi Computer Vision Example Bugs/Issues
 
