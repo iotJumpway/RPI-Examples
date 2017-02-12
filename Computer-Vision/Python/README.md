@@ -41,15 +41,15 @@ There are a few tutorials that you should follow before beginning, especially if
 
 - [Preparing Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/1-Raspberry-Pi-Prep.md "Preparing Your Raspberry Pi")
 
-- [Installing OpenCV On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Installing OpenCV On Your Raspberry Pi")
-
 - [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi")
 
-- [Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
+- [Installing OpenCV On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Installing OpenCV On Your Raspberry Pi")
 
 - [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/5-Installing-Motion.md "Installing Linux Motion On Your Raspberry Pi")
 
 - [Installing Secure Nginx Server For Linux Motion On Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/6-Secure-Nginx-Server-For-Motion.md "Installing Secure Nginx Server For Linux Motion On Raspberry Pi")
+
+- [Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
 
 ## Cloning The Repo
 
@@ -67,7 +67,38 @@ Next you will need to navigate to the Computer-Vision directory and install the 
 
 ## Installing Open CV
 
-In addition OpenCv needs to be installed, follow the [Installing OpenCV On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Installing OpenCV On Your Raspberry Pi") tutorial to accomplish this, this is the computer vision library we will be using.
+OpenCv needs to be installed, follow the [Installing OpenCV On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Installing OpenCV On Your Raspberry Pi") tutorial to accomplish this, this is the computer vision library we will be using.
+
+## Installing Linux Motion
+
+We will use Linux Motion to stream a live feed to a local port on the Raspberry Pi which OpenCv will connect to and read in the frames from the stream. To get Linux Motion set up, follow the [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/5-Installing-Motion.md "Installing Linux Motion On Your Raspberry Pi") tutorial.
+
+## Setup Domain Name & SSL For Your Raspberry Pi
+
+We like to make sure that we try to provide tutorials that will help people learn to create secure projects. For the video stream to work securely, you will need to set up a domain name that is pointed to your Raspberry Pi, you will also need to set up an SSL certificate to ensure that the server used for streaming the video is secure. The [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi") tutorial explains how to do this, if in doubt ask your registrar or host to assist you. If you cloned this repository to your home directory, the paths that you need to use for your CSR and key generation in the following tutorial are:
+
+```
+	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/key.key
+
+```
+
+and
+
+```
+	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/csr.csr 
+
+```
+
+Once you have received your signed .crt file from certificate authority, you need to upload it to:
+
+```
+	~/IoT-JumpWay-RPI-Examples/Computer-Vision/Python/certs/crt.csr 
+
+```
+
+## Installing A Secure Nginx Server For Linux Motion
+
+We will use Nginx as our server solution and set it up in a way that it has a Grade A+ SSL rating on Qualys SSL Labs SSL Report. To do this we have provided a guide in the [Installing Secure Nginx Server For Linux Motion On Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/6-Secure-Nginx-Server-For-Motion.md "Installing Secure Nginx Server For Linux Motion On Raspberry Pi"), follow this tutorial to set up your server. You will need of completed the [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/5-Installing-Motion.md "Installing Linux Motion On Your Raspberry Pi") and [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi") tutorials before starting this step.  
 
 ## Connection Credentials & Sensor Settings
 
