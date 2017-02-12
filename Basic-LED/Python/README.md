@@ -3,10 +3,13 @@
 ![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/Basic-LED/Raspberry-Pi-Basic-LED-Example.png)  
 
 ## Introduction
+Facial recognition and identification will soon be playing a major role in our every day lives. The technology opens up a whole new world of possibilities, and applies to almost every aspect of our lives. Use cases of facial recognition/identification include security systems, authentication systems, personalised smart homes, and home care assistants.
 
-Here you will find sample device scripts for connecting a Raspberry Pi to the TechBubble Technologies IoT JumpWay using the Python MQTT Library.
+## What Will We Build?
 
-This tutorial will help you to set up a Raspberry Pi that allows control of an LED, and also an application that can control the LED via the IoT JumpWay.
+This tutorial is a simple tutorial that will help you take your first steps to using the TechBubble IoT JumpWay to connect your IoT devices and applications to the Internet of Things. 
+
+The tutorial will use TechBubble Technologies IoT JumpWay Python MQTT Library for communication, a Raspberry Pi with an added LED, and an application that can control the LED via the IoT JumpWay.
 
 ## Python Versions
 
@@ -15,7 +18,8 @@ This tutorial will help you to set up a Raspberry Pi that allows control of an L
 
 ## Software Requirements
 
-1. TechBubbleIoTJumpWayMQTT  
+1. Jessie
+2. [TechBubble IoT JumpWay Python MQTT Client](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Python-MQTT-Clients "TechBubble IoT JumpWay Python MQTT Client")  
 
 ## Hardware requirements
 
@@ -26,6 +30,14 @@ This tutorial will help you to set up a Raspberry Pi that allows control of an L
 3. 1 x 220 ohm Resistor
 4. 2 x Jumper Wires
 5. 1 x Breadboard
+
+## Before You Begin
+
+There are a few tutorials that you should follow before beginning, especially if it is the first time you have followed any of our Raspberry Pi tutorials or if it is the first time you have used the TechBubble IoT JumpWay Developer Program.
+
+- [IoT JumpWay Developer Program Docs (5-10 minute read/setup)](https://github.com/TechBubbleTechnologies/IoT-JumpWay-Docs/ "IoT JumpWay Developer Program Docs (5-10 minute read/setup)")
+
+- [Preparing Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/1-Raspberry-Pi-Prep.md "Preparing Your Raspberry Pi")
 
 ## Before You Begin
 
