@@ -1,10 +1,10 @@
-# Installation Of OpenCV On Raspberry Pi
+# Installation Of OpenCV 3.1.0 On Raspberry Pi
 
 ![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 ## Introduction
 
-The following information will help you install OpenCV on your Raspberry Pi. This installation includes the additional modules required for facial identification.
+The following information will help you install OpenCV3.1.0 on your Raspberry Pi. This installation includes the additional modules required for facial identification.
 
 ## Hardware Requirements
 
@@ -66,7 +66,7 @@ The following information will help you install OpenCV on your Raspberry Pi. Thi
     $ pip install numpy
     ```
 
-8. Checkout current version of OpenCV:
+8. Checkout current OpenCV 3.1.0:
 
     ```
     $ cd ~
@@ -75,7 +75,7 @@ The following information will help you install OpenCV on your Raspberry Pi. Thi
     $ git checkout 3.1.0
     ```
 
-9. Checkout current version of OpenCV Modules:
+9. Checkout OpenCV Modules  3.1.0:
 
     ```
     $ cd ~
