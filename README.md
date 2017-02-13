@@ -20,7 +20,9 @@ The Raspberry Pi examples provide example projects that you can use to get start
 
 - [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi")
 
-- [Installing OpenCV On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Installing OpenCV On Your Raspberry Pi")
+- [Installing OpenCV 3.2.0 On Your Raspberry Pi (LATEST RELEASE)](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV-3-2-0.md "Installing OpenCV 3.2.0 On Your Raspberry Pi (LATEST RELEASE)")
+
+- [Installing OpenCV 3.1.0 On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/2-Installing-OpenCV.md "Installing OpenCV 3.1.0 On Your Raspberry Pi")
 
 - [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/5-Installing-Motion.md "Installing Linux Motion On Your Raspberry Pi")
 
