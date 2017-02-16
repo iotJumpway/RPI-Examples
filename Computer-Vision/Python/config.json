@@ -20,13 +20,13 @@
 		"password": "Your MQTT Password"
 	},
 	"ClassifierSettings":{
-		"HAAR_FACES": "Haarcascades/haarcascade_frontalface_default.xml",
+		"HAAR_FACES": "Haarcascades/lbpcascade_frontalface_improved.xml",
 		"HAAR_FACES2": "Haarcascades/haarcascade_frontalface_alt.xml",
 		"HAAR_FACES3": "Haarcascades/haarcascade_frontalface_alt2.xml",
 		"HAAR_PROFILES": "Haarcascades/haarcascade_profileface.xml",
 		"HAAR_SMILE": "Haarcascades/haarcascade_smile.xml",
 		"HAAR_EYE": "Haarcascades/haarcascade_eye.xml",
-		"HAAR_SCALE_FACTOR": 1.3,
+		"HAAR_SCALE_FACTOR": 1.1,
 		"HAAR_MIN_NEIGHBORS":4,
 		"Model":"model/TASSModel.xml",
 		"predictionThreshold":3000.0,  

@@ -36,17 +36,16 @@ class TassCore():
         faces = faceCascade.detectMultiScale(gray,
             scaleFactor=self._configs["ClassifierSettings"]["HAAR_SCALE_FACTOR"],
             minNeighbors=self._configs["ClassifierSettings"]["HAAR_MIN_NEIGHBORS"],
-            minSize=(30,30),
-            flags=cv2.CASCADE_SCALE_IMAGE
+            minSize=(30,30)
         )
+
 
         if not len(faces):
             faceCascade = cv2.CascadeClassifier( os.getcwd()+'/'+self._configs["ClassifierSettings"]["HAAR_FACES2"])
             faces = faceCascade.detectMultiScale(gray,
                 scaleFactor=self._configs["ClassifierSettings"]["HAAR_SCALE_FACTOR"],
                 minNeighbors=self._configs["ClassifierSettings"]["HAAR_MIN_NEIGHBORS"],
-                minSize=(30,30),
-                flags=cv2.CASCADE_SCALE_IMAGE
+                minSize=(30,30)
             )
 
         if not len(faces):
@@ -54,8 +53,7 @@ class TassCore():
             faces = faceCascade.detectMultiScale(gray,
                 scaleFactor=self._configs["ClassifierSettings"]["HAAR_SCALE_FACTOR"],
                 minNeighbors=self._configs["ClassifierSettings"]["HAAR_MIN_NEIGHBORS"],
-                minSize=(30,30),
-                flags=cv2.CASCADE_SCALE_IMAGE
+                minSize=(30,30)
             )
 
         if not len(faces):
@@ -63,13 +61,10 @@ class TassCore():
             faces = faceCascade.detectMultiScale(gray,
                 scaleFactor=self._configs["ClassifierSettings"]["HAAR_SCALE_FACTOR"],
                 minNeighbors=self._configs["ClassifierSettings"]["HAAR_MIN_NEIGHBORS"],
-                minSize=(30,30),
-                flags=cv2.CASCADE_SCALE_IMAGE
+                minSize=(30,30)
             )
 
         print( "Found " + str(len(faces)) + " face(s)")
-
-        currentImage = os.getcwd()+"/current.jpg"
 
         if len(faces):
 
@@ -88,7 +83,7 @@ class TassCore():
         midy = y + h/2
         y1 = max(0, midy-crop_height/2)
         y2 = min(image.shape[0]-1, midy+crop_height/2)
-        return image[y1:y2, x:x+w]
+        return image[int(y1):int(y2), int(x):int(x)+int(w)]
 
     def prepareImage(self,filename):
             return self.resize(cv2.imread(filename, cv2.IMREAD_GRAYSCALE))

@@ -8,7 +8,6 @@
 #
 # Contributors:
 #   Adam Milton-Barker - TechBubble Technologies Limited
-#   Andrej Petelin - TechBubble Technologies Limited
 # *****************************************************************************
 
 import cv2
@@ -41,12 +40,11 @@ class TASS():
 		print("LOADING VIDEO CAMERA")
 
 		#self.OpenCVCapture = cv2.VideoCapture(0)
-		self.OpenCVCapture = cv2.VideoCapture()
-		self.OpenCVCapture.open('http://'+self.configs["StreamSettings"]["streamIP"]+':'+self.configs["StreamSettings"]["streamPort"]+'/stream.mjpg')
+		self.OpenCVCapture = cv2.VideoCapture('http://'+self.configs["StreamSettings"]["streamIP"]+':'+self.configs["StreamSettings"]["streamPort"]+'/stream.mjpg')
 
-		self.OpenCVCapture.set(5, 30) 
-		self.OpenCVCapture.set(3,1280)
-		self.OpenCVCapture.set(4,720)
+		#self.OpenCVCapture.set(5, 30) 
+		#self.OpenCVCapture.set(3,640)
+		#self.OpenCVCapture.set(4,480)
 		
 	def deviceCommandsCallback(self,topic,payload):
 		
@@ -76,10 +74,9 @@ class TASS():
 		self.JumpWayMQTTClient.deviceCommandsCallback = self.deviceCommandsCallback
 		
 TASS = TASS()
-
 model = cv2.face.createEigenFaceRecognizer(threshold=TASS.configs["ClassifierSettings"]["predictionThreshold"])
 model.load(TASS.configs["ClassifierSettings"]["Model"])
-
+print("LOADED STREAM & MODEL")
 while True:
 
 	if(TASS.train==1):

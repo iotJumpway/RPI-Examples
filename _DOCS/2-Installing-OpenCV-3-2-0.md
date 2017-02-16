@@ -2,6 +2,8 @@
 
 ![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
+#WARNING: This issue seems to be unstable with the Raspberry Pi, please feel to try it but at this moment it seems best to stick with 3.1.0
+
 ## Introduction
 
 The following information will help you install the latest version of OpenCV, 3.2.0, on your Raspberry Pi. This installation includes the additional modules required for facial identification.

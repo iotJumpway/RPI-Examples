@@ -84,7 +84,19 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     $ git checkout 3.1.0
     ```
 
-9. Setup the build:
+9. There is an issue with some of the code that needs to be fixed before you can build:
+
+    ```
+    $ nano ~/opencv_contrib/blob/master/modules/face/include/opencv2/face.hpp
+    ```
+
+    Change line 259 to: 
+
+    ```
+    CV_WRAP_AS(predict_label) int predict(InputArray src) const;
+    ```
+
+10. Setup the build:
 
     ```
     $ cd ~/opencv
@@ -93,7 +105,7 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules -D BUILD_EXAMPLES=ON ..
     ```
 
-10. Make and make install the build:
+11. Make and make install the build:
 
     ```
     $ make -j4
