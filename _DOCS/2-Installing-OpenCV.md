@@ -41,6 +41,12 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     ```
     $ sudo apt-get install libgtk2.0-dev
     ```
+    
+    A member pointed out they had issues with this library, if so you may also want to try:
+
+    ```
+    $ sudo apt-get install libgtk2.0-dev pkg-config
+    ```
 
 5. Install video processing software:
 
@@ -54,19 +60,19 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     $ sudo apt-get install libatlas-base-dev gfortran
     ```
 
-6. Install Python 2.7 development libraries:
+7. Install Python 2.7 development libraries:
 
     ```
     $ sudo apt-get install python2.7-dev
     ```
 
-7. Install Numpy:
+8. Install Numpy:
 
     ```
     $ pip install numpy
     ```
 
-8. Checkout current OpenCV 3.1.0:
+9. Checkout current OpenCV 3.1.0:
 
     ```
     $ cd ~
@@ -75,7 +81,7 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     $ git checkout 3.1.0
     ```
 
-9. Checkout OpenCV Modules  3.1.0:
+10. Checkout OpenCV Modules  3.1.0:
 
     ```
     $ cd ~
@@ -84,7 +90,7 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     $ git checkout 3.1.0
     ```
 
-9. There is an issue with some of the code that needs to be fixed before you can build:
+11. There is an issue with some of the code that needs to be fixed before you can build:
 
     ```
     $ nano ~/opencv_contrib/blob/master/modules/face/include/opencv2/face.hpp
@@ -96,7 +102,7 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     CV_WRAP_AS(predict_label) int predict(InputArray src) const;
     ```
 
-10. Setup the build:
+12. Setup the build:
 
     ```
     $ cd ~/opencv
@@ -105,7 +111,7 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules -D BUILD_EXAMPLES=ON ..
     ```
 
-11. Make and make install the build:
+13. Make and make install the build:
 
     ```
     $ make -j4
