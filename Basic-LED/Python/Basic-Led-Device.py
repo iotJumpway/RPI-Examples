@@ -30,7 +30,7 @@ class BasicLED():
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
         GPIO.setup(
-            self.configs["Sensors"]["LED"]["PIN"],
+            self.configs["Actuators"]["LED"]["PIN"],
             GPIO.OUT
         )
         
