@@ -84,13 +84,13 @@ If youa re going to have your Raspberry Pi accessible via the outside world, the
 6. To ensure that the firewall is loaded each and everytime you boot up your Raspberry Pi, add the following line to the end of the file then save:
   
     ```
-        pre-up iptables-restore < /etc/network/iptables
+        pre-up iptables-restore < /etc/iptables
     ```
 
 7. Load the new rules:
   
     ```
-        $ sudo iptables-restore /etc/network/iptables
+        $ sudo iptables-restore < /etc/iptables
     ```
 
 8. Check if it has worked, you should see the rules you added in the output of the following command.
