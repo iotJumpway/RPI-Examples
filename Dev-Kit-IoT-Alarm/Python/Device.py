@@ -37,7 +37,6 @@ class Device():
         print("Received command data: %s" % (payload))
 
         jsonData = json.loads(payload.decode("utf-8"))
-        print(jsonData['ActuatorID'])
 
         if int(jsonData['ActuatorID'])==self.configs["Actuators"]["trueLED"]["ID"] and jsonData['Command']=='TOGGLE' and jsonData['CommandValue']=='ON':
 
@@ -101,11 +100,11 @@ while True:
     #grovepi.digitalWrite(Device.configs["Actuators"]["trueLED"]["PIN"],1)
     #grovepi.digitalWrite(Device.configs["Actuators"]["falseLED"]["PIN"],1)
     #grovepi.digitalWrite(Device.configs["Actuators"]["Buzzer"]["PIN"],1)
-    #time.sleep(1)
+    #time.sleep(2)
     #grovepi.digitalWrite(Device.configs["Actuators"]["trueLED"]["PIN"],0)
     #grovepi.digitalWrite(Device.configs["Actuators"]["falseLED"]["PIN"],0)
     #grovepi.digitalWrite(Device.configs["Actuators"]["Buzzer"]["PIN"],0)
-    #time.sleep(1)
+    #time.sleep(2)
     pass
 
 Device.jumpwayClient.disconnectFromDevice()
