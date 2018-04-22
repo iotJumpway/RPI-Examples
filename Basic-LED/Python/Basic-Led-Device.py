@@ -18,7 +18,7 @@ class BasicLED():
         self.jumpwayClient = ""
         self.configs = {}
 
-        with open('config.json') as configs:
+        with open('required/confs.json') as configs:
             self.configs = json.loads(configs.read())
 
         GPIO.setmode(GPIO.BCM)
