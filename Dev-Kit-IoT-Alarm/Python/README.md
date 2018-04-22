@@ -50,8 +50,11 @@ You will need to clone this repository to a location on your Raspberry Pi 3. Nav
 ## Install Requirements
 
     $ cd IoT-JumpWay-RPI-Examples/Dev-Kit-IoT-Alarm/Python
-	$ (sudo) pip install --upgrade pip
-    $ (sudo) pip install -r requirements.txt
+	$ sudo pip3 install --upgrade pip
+    $ sudo pip3 install -r requirements.txt
+    $ curl -kL dexterindustries.com/update_grovepi | sudo bash
+
+Then reboot your Raspberry Pi.
 
 ## Setting Up Your Raspberry Pi
 
