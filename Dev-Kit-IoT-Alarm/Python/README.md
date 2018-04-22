@@ -21,7 +21,7 @@ The tutorial will use IoT JumpWay Python MQTT Library for communication, a Raspb
 
 ## Hardware requirements
 
-![IoT JumpWay Raspberry Pi Dev Kit IoT Alarm](../images/Hardware.jpg)
+![IoT JumpWay Raspberry Pi Dev Kit IoT Alarm](../images/hardware.jpg)
 
 - 1 x Raspberry Pi 3
 - 1 x Grove starter kit for IoT, Raspberry Pi edition
