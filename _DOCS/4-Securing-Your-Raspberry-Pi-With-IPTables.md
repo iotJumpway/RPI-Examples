@@ -1,6 +1,6 @@
 # Securing Your Raspberry Pi With IPTables
 
-![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)  
+![IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 ## Introduction
 
@@ -13,7 +13,7 @@ If youa re going to have your Raspberry Pi accessible via the outside world, the
     ```
     $ sudo apt-get install iptables
     ```
-    
+
 2. If/once installed you can check your current configs by running one of the following commands:
 
     ```
@@ -76,38 +76,36 @@ If youa re going to have your Raspberry Pi accessible via the outside world, the
     ```
 
 5. Once you have modified and saved your config file, add a rule to /etc/network/interfaces by opening it:
-  
+
     ```
         $ sudo nano /etc/network/interfaces
     ```
 
 6. To ensure that the firewall is loaded each and everytime you boot up your Raspberry Pi, add the following line to the end of the file then save:
-  
+
     ```
         pre-up iptables-restore < /etc/iptables
     ```
 
 7. Load the new rules:
-  
+
     ```
         $ sudo iptables-restore < /etc/iptables
     ```
 
 8. Check if it has worked, you should see the rules you added in the output of the following command.
-  
+
     ```
         $ sudo iptables-save
-  
+
     ```
 
 9. Reboot your Raspberry Pi and your firewall should boot up on startup everytime now.
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Bugs/Issues
+## Bugs/Issues
 
 Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Contributors
+## Contributors
 
-- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
-
-![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  
+[![Adam Milton-Barker, Intel® Software Innovator](../images/main/Intel-Software-Innovator.jpg)](https://github.com/AdamMiltonBarker)

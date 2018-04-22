@@ -1,7 +1,7 @@
 
 # Setup Domain Name & SSL For Your Raspberry Pi
 
-![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
+![IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 ## Introduction
 
@@ -40,12 +40,10 @@ To help ensure that data passed between your Raspberry Pi and any connecting web
 
 11. Connect to your Raspberry Pi using SFTP, for this I always WinSCP on Windows but you can use FileZilla or the FTP client of your choice. Once connected, upload your SSL .crt file to the certs folder specified in the related guide for the project you are setting up.
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Bugs/Issues
+## Bugs/Issues
 
 Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Contributors
+## Contributors
 
-- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
-
-![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  
+[![Adam Milton-Barker, Intel® Software Innovator](../images/main/Intel-Software-Innovator.jpg)](https://github.com/AdamMiltonBarker)

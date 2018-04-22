@@ -1,15 +1,15 @@
 # Installation Of Linux Motion On Raspberry Pi
 
-![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
+![IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 ## Introduction
 
 The following information will help you install Linux Motion on your Raspberry Pi.
 
-PLEASE NOTE: 
+PLEASE NOTE:
 
-- This is a basic tutorial that will result in an insecure stream, in project tutorials where we use Linux Motion, we will take you through creating a secure stream. 
-- Motion will store images and videos on your Raspberry Pi, if you do not keep on top of them your diskspace will quickly fill up, check out section 10 of this guide for more info. 
+- This is a basic tutorial that will result in an insecure stream, in project tutorials where we use Linux Motion, we will take you through creating a secure stream.
+- Motion will store images and videos on your Raspberry Pi, if you do not keep on top of them your diskspace will quickly fill up, check out section 10 of this guide for more info.
 
 ## Hardware Requirements
 
@@ -37,7 +37,7 @@ PLEASE NOTE:
         DAEMON = OFF
         stream_localhost off
     ```
-    
+
 4. If you want to change the port that the webcam is streamed to change the following value. It is a good idea to change the port so that it does not use the default port.
 
     ```
@@ -47,7 +47,7 @@ PLEASE NOTE:
 5. In my case I am using a camera that is 1280 x 780, motion may not work if you do not have the correct resolution set for your camera, to modify the dimensions find and edit the following in the config file:
 
     ```
-        width 640 
+        width 640
         height 380
     ```
 
@@ -74,7 +74,7 @@ PLEASE NOTE:
 9. If you want to change the location that the images and videos are saved to, change the following location:
 
     ```
-        target_dir 
+        target_dir
     ```
 
     If you change this value you should make sure you have given the correct permissions for Motion:
@@ -85,7 +85,7 @@ PLEASE NOTE:
         chmod -R g+w PATH_TO_YOUR_DIRECTORY
     ```
 
-10. Using Motion with the default settings will result in images being saved to the target_dir which will eventually use up all of your diskspace. If you would like to turn this feature off so that only videos are saved, find and edit the following line: 
+10. Using Motion with the default settings will result in images being saved to the target_dir which will eventually use up all of your diskspace. If you would like to turn this feature off so that only videos are saved, find and edit the following line:
 
     ```
         output_pictures off
@@ -93,19 +93,19 @@ PLEASE NOTE:
 
 11. Close the file and save your changes.
 
-12. Execute the following to open up the daemon configuration:  
+12. Execute the following to open up the daemon configuration:
 
     ```
         $ sudo nano /etc/default/motion
     ```
 
-13. Make the following change: 
+13. Make the following change:
 
     ```
         start_motion_daemon = yes
     ```
 
-14. Check Linux Motion is working, execute the following command and then navigate to YOUR_RPI_IP:8081 
+14. Check Linux Motion is working, execute the following command and then navigate to YOUR_RPI_IP:8081
 
     ```
         sudo service motion start
@@ -113,8 +113,10 @@ PLEASE NOTE:
 
 These are just some settings that we think will be useful to you, review the full motion.conf file for all possible settings.
 
-## IoT JumpWay Intel® Edison Examples Document Contributors
+## Bugs/Issues
 
-- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
+Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
 
-![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  
+## Contributors
+
+[![Adam Milton-Barker, Intel® Software Innovator](../images/main/Intel-Software-Innovator.jpg)](https://github.com/AdamMiltonBarker)

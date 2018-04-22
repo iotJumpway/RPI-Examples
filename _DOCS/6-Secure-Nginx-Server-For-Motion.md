@@ -1,6 +1,6 @@
 # Installation Of SECURE Nginx Server For Motion On Raspberry Pi
 
-![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
+![IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 ## Introduction
 
@@ -12,13 +12,13 @@ The following information will help you install a secure Nginx server for your M
 
 ## Before You Begin
 
-Before you begin you should follow the tutorials below as this tutorial is for securing the Linux Motion stream, you should follow the [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Installing Linux Motion On Your Raspberry Pi") tutorial first. This tutorial will not work without following the [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi") tutorial.
+Before you begin you should follow the tutorials below as this tutorial is for securing the Linux Motion stream, you should follow the [Installing Linux Motion On Your Raspberry Pi](https://github.com/iotJumpway/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Installing Linux Motion On Your Raspberry Pi") tutorial first. This tutorial will not work without following the [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/iotJumpway/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi") tutorial.
 
-- [Installing Linux Motion On Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Installing Linux Motion On Your Raspberry Pi")
+- [Installing Linux Motion On Your Raspberry Pi](https://github.com/iotJumpway/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Installing Linux Motion On Your Raspberry Pi")
 
-- [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi")
+- [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/iotJumpway/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi")
 
-- [Securing Your Raspberry Pi With IPTables](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
+- [Securing Your Raspberry Pi With IPTables](https://github.com/iotJumpway/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/4-Securing-Your-Raspberry-Pi-With-IPTables.md "Securing Your Raspberry Pi With IPTables")
 
 ## Guide
 
@@ -39,11 +39,11 @@ Before you begin you should follow the tutorials below as this tutorial is for s
 3. Execute the followin commands, this will take some time so kick back with a beer.
 
     ```
-        $ cd /etc/nginx 
+        $ cd /etc/nginx
         $ sudo openssl dhparam -out dh2048.pem 2048
     ```
 
-4. After following the [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/TechBubbleTechnologies/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi") tutorial, place your ca.crt, crt.crt and key.key files into the /etc/nginx folder.
+4. After following the [Setup Domain Name & SSL For Your Raspberry Pi](https://github.com/iotJumpway/IoT-JumpWay-RPI-Examples/blob/master/_DOCS/3-Raspberry-Pi-Domain-And-SSL.md "Setup Domain Name & SSL For Your Raspberry Pi") tutorial, place your ca.crt, crt.crt and key.key files into the /etc/nginx folder.
 
 5. Execute the following to open up the configuration file:
 
@@ -109,8 +109,10 @@ Before you begin you should follow the tutorials below as this tutorial is for s
         sudo service nginx reload
     ```
 
-## IoT JumpWay Intel® Edison Examples Document Contributors
+## Bugs/Issues
 
-- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
+Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
 
-![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  
+## Contributors
+
+[![Adam Milton-Barker, Intel® Software Innovator](../images/main/Intel-Software-Innovator.jpg)](https://github.com/AdamMiltonBarker)

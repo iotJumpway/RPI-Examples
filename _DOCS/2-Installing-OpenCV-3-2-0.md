@@ -1,6 +1,6 @@
 # Installation Of OpenCV 3.2.0 On Raspberry Pi
 
-![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
+![IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 #WARNING: This issue seems to be unstable with the Raspberry Pi, please feel to try it but at this moment it seems best to stick with 3.1.0
 
@@ -127,7 +127,7 @@ The following information will help you install the latest version of OpenCV, 3.
     $ sudo make -j4
     ```
 
-14. Once complete you should see the following: 
+14. Once complete you should see the following:
 
     ```
     [100%] Built target ...
@@ -151,13 +151,10 @@ The following information will help you install the latest version of OpenCV, 3.
 
 17. If you do not see any errors here, congratulations, you have successfully installed the latest version of OpenCV on your Raspberry Pi, grab another beer to celebrate your accomplishment.
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Bugs/Issues
+## Bugs/Issues
 
 Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Contributors
+## Contributors
 
-- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
-
-![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  
-    
+[![Adam Milton-Barker, Intel® Software Innovator](../images/main/Intel-Software-Innovator.jpg)](https://github.com/AdamMiltonBarker)

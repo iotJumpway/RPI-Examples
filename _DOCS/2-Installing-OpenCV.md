@@ -1,6 +1,6 @@
 # Installation Of OpenCV 3.1.0 On Raspberry Pi
 
-![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
+![IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 ## Introduction
 
@@ -41,7 +41,7 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     ```
     $ sudo apt-get install libgtk2.0-dev
     ```
-    
+
     A member pointed out they had issues with this library, if so you may also want to try:
 
     ```
@@ -96,7 +96,7 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     $ nano ~/opencv_contrib/blob/master/modules/face/include/opencv2/face.hpp
     ```
 
-    Change line 259 to: 
+    Change line 259 to:
 
     ```
     CV_WRAP_AS(predict_label) int predict(InputArray src) const;
@@ -119,12 +119,10 @@ The following information will help you install OpenCV3.1.0 on your Raspberry Pi
     $ sudo ldconfig
     ```
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Bugs/Issues
+## Bugs/Issues
 
 Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Contributors
+## Contributors
 
-- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
-
-![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  
+[![Adam Milton-Barker, Intel® Software Innovator](../images/main/Intel-Software-Innovator.jpg)](https://github.com/AdamMiltonBarker)

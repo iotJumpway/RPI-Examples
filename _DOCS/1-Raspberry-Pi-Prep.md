@@ -1,6 +1,6 @@
 # Preparing your Raspberry Pi
 
-![TechBubble IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)  
+![IoT JumpWay Docs](../images/main/Raspberry-Pi-Documentation.png)
 
 ## Introduction
 
@@ -71,18 +71,16 @@ The following information will help you setup and secure your Raspberry Pi.
     $ sudo deluser -remove-home pi
     ```
 
-10. Reboot 
+10. Reboot
 
     ```
     $ sudo reboot
     ```
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Bugs/Issues
+## Bugs/Issues
 
 Please feel free to create issues for bugs and general issues you come across whilst using the IoT JumpWay Raspberry Pi Examples. You may also use the issues area to ask for general help whilst using the IoT JumpWay Raspberry Pi Examples in your IoT projects.
 
-## IoT JumpWay Raspberry Pi Documentation & Tutorials Contributors
+## Contributors
 
-- [Adam Milton-Barker, TechBubble Technologies Founder](https://github.com/AdamMiltonBarker "Adam Milton-Barker, TechBubble Technologies Founder")
-
-![Adam Milton-Barker,  Intel Software Innovator](../images/main/Intel-Software-Innovator.jpg)  
+[![Adam Milton-Barker, Intel® Software Innovator](../images/main/Intel-Software-Innovator.jpg)](https://github.com/AdamMiltonBarker)
