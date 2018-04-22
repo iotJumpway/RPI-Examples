@@ -1,24 +1,29 @@
 {
-	"AppSettings":{
-		"armed":1
-	},
+    "IoTJumpWay": {
+        "Location": 0,
+        "Zone": 0,
+        "Device": 0,
+        "DeviceName" : "",
+        "App": 0,
+        "AppName": ""
+    },
+    "Actuators": {
+        "LED": {
+            "ID": 0,
+            "PIN": 18
+        }
+    },
 	"StreamSettings":{
-		"streamIP":"YOUR RASPBERRY PI IP",
+		"streamIP":"",
 		"streamPort":1234
 	},
-	"IoTJumpWaySettings": {
-		"SystemID": "1",
-		"SystemName": "TASS",
-		"SystemLocation": 0,
-		"SystemZone": 0,
-		"SystemDeviceID": 0,
-		"SystemDeviceName" : "Your Device Name",
-		"SystemCameraID": 0
-	},
-	"IoTJumpWayMQTTSettings": {
-		"username": "Your MQTT Username",
-		"password": "Your MQTT Password"
-	},
+    "Sensors": {},
+	"IoTJumpWayMQTT": {
+        "MQTTUsername": "",
+        "MQTTPassword": "",
+        "AppMQTTUsername": "",
+        "AppMQTTPassword": ""
+    },
 	"ClassifierSettings":{
 		"HAAR_FACES": "Haarcascades/lbpcascade_frontalface_improved.xml",
 		"HAAR_FACES2": "Haarcascades/haarcascade_frontalface_alt.xml",
@@ -29,7 +34,7 @@
 		"HAAR_SCALE_FACTOR": 1.1,
 		"HAAR_MIN_NEIGHBORS":4,
 		"Model":"model/TASSModel.xml",
-		"predictionThreshold":3000.0,  
+		"predictionThreshold":3000.0,
 		"height":112,
 		"width": 92
 	}
