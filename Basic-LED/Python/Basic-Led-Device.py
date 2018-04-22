@@ -1,12 +1,10 @@
 ############################################################################################
-# Title: IoT JumpWay Raspberry Pi Basic LED
+# Title: IoT JumpWay Raspberry Pi Basic LED Device
 # Description: IoT connected LED using Raspberry Pi.
 # Last Modified: 2018-04-22
 ############################################################################################
 
-import time
-import sys
-import json
+import time, sys, json
 
 import RPi.GPIO as GPIO
 import JumpWayMQTT.Device as JWMQTTdevice
@@ -15,7 +13,7 @@ class BasicLED():
 
     def __init__(self):
 
-        self.jumpwayClient = ""
+        self.jumpwayClient = None
         self.configs = {}
 
         with open('required/confs.json') as configs:

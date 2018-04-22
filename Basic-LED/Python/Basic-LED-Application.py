@@ -1,59 +1,51 @@
-# *****************************************************************************
-# Copyright (c) 2016 TechBubble Technologies and other Contributors.
-#
-# All rights reserved. This program and the accompanying materials
-# are made available under the terms of the Eclipse Public License v1.0
-# which accompanies this distribution, and is available at
-# http://www.eclipse.org/legal/epl-v10.html 
-#
-# Contributors:
-#   Adam Milton-Barker - TechBubble Technologies Limited
-# *****************************************************************************
+############################################################################################
+# Title: IoT JumpWay Raspberry Pi Basic LED Application
+# Description: Application for connecting to IoT connected LED using Raspberry Pi.
+# Last Modified: 2018-04-22
+############################################################################################
 
-import time
-import sys
-import json
+import time, sys, json
 
-import techbubbleiotjumpwaymqtt.application
+import JumpWayMQTT.Device as JWMQTTdevice
 
 class BasicLedApplication():
-    
+
     def __init__(self):
-        
-        self.JumpWayMQTTClient = ""
+
+        self.jumpwayClient = None
         self.configs = {}
-        
-        with open('config.json') as configs:
+
+        with open('required/confs.json') as configs:
             self.configs = json.loads(configs.read())
-        
+
         self.startMQTT()
-            
+
     def startMQTT(self):
-        
+
         try:
-            
-            self.JumpWayMQTTClient = techbubbleiotjumpwaymqtt.application.JumpWayPythonMQTTApplicationConnection({
-				"locationID": self.configs["IoTJumpWaySettings"]["SystemLocation"],  
-				"applicationID": self.configs["IoTJumpWaySettings"]["SystemApplicationID"], 
-				"applicationName": self.configs["IoTJumpWaySettings"]["SystemApplicationName"], 
-				"username": self.configs["IoTJumpWayMQTTSettings"]["applicationUsername"], 
-				"password": self.configs["IoTJumpWayMQTTSettings"]["applicationPassword"]
-			})
-            
+
+            self.jumpwayClient = JWMQTTdevice.DeviceConnection({
+                "locationID": self.configs["IoTJumpWay"]["Location"],
+                "applicationID": self.configs["IoTJumpWay"]["App"],
+                "applicationName": self.configs["IoTJumpWay"]["AppName"],
+                "username": self.configs["IoTJumpWayMQTT"]["AppMQTTUsername"],
+                "password": self.configs["IoTJumpWayMQTT"]["AppMQTTPassword"]
+            })
+
         except Exception as e:
             print(str(e))
             sys.exit()
-            
-        self.JumpWayMQTTClient.connectToApplication()
-        
+
+        self.jumpwayClient.connectToApplication()
+
 BasicLedApplication = BasicLedApplication()
 
 while True:
-    
-    BasicLedApplication.JumpWayMQTTClient.publishToDeviceChannel(
+
+    BasicLedApplication.jumpwayClient.publishToDeviceChannel(
 		"Commands",
-		BasicLedApplication.configs["IoTJumpWaySettings"]["SystemZone"],
-		BasicLedApplication.configs["IoTJumpWaySettings"]["SystemDeviceID"],
+		BasicLedApplication.configs["IoTJumpWay"]["Zone"],
+		BasicLedApplication.configs["IoTJumpWay"]["Device"],
 		{
 			"Actuator":"LED",
 			"ActuatorID":BasicLedApplication.configs["Actuators"]["LED"]["ID"],
@@ -61,13 +53,13 @@ while True:
 			"CommandValue":"ON"
 		}
     )
-    
+
     time.sleep(5)
-    
-    BasicLedApplication.JumpWayMQTTClient.publishToDeviceChannel(
+
+    BasicLedApplication.jumpwayClient.publishToDeviceChannel(
 		"Commands",
-		BasicLedApplication.configs["IoTJumpWaySettings"]["SystemZone"],
-		BasicLedApplication.configs["IoTJumpWaySettings"]["SystemDeviceID"],
+		BasicLedApplication.configs["IoTJumpWay"]["Zone"],
+		BasicLedApplication.configs["IoTJumpWay"]["Device"],
 		{
 			"Actuator":"LED",
 			"ActuatorID":BasicLedApplication.configs["Actuators"]["LED"]["ID"],
@@ -75,7 +67,7 @@ while True:
 			"CommandValue":"OFF"
 		}
     )
-    
+
     time.sleep(5)
-    
-BasicLedApplication.JumpWayMQTTClient.disconnectFromApplication()
+
+BasicLedApplication.jumpwayClient.disconnectFromApplication()
