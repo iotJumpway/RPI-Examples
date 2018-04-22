@@ -1,0 +1,32 @@
+{
+    "IoTJumpWay": {
+        "Location": 0,
+        "Zone": 0,
+        "Device": 0,
+        "DeviceName" : "",
+        "App": 0,
+        "AppName": ""
+    },
+    "Actuators": {
+        "trueLED": {
+            "ID": 0,
+            "PIN": 5
+        },
+        "falseLED": {
+            "ID": 0,
+            "PIN": 6
+        },
+        "Buzzer": {
+            "ID": 0,
+            "PIN": 2
+        }
+    },
+    "Cameras": {},
+    "Sensors": {},
+	"IoTJumpWayMQTT": {
+        "MQTTUsername": "",
+        "MQTTPassword": "",
+        "AppMQTTUsername": "",
+        "AppMQTTPassword": ""
+    }
+}
