@@ -15,7 +15,7 @@ class BasicLED():
 
     def __init__(self):
 
-        self.JumpWayMQTTClient = ""
+        self.jumpwayClient = ""
         self.configs = {}
 
         with open('config.json') as configs:
