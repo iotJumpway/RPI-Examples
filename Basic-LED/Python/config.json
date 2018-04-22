@@ -10,7 +10,7 @@
     "Actuators": {
         "LED": {
             "ID": 0,
-            "PIN": 5
+            "PIN": 18
         }
     },
     "Sensors": {},

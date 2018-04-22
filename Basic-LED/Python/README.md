@@ -72,7 +72,18 @@ First of all you need to connect up an LED to your Raspberry Pi. To connect the 
 
 ![IoT JumpWay Raspberry Pi Basic LED Example Docs](../../images/main/Device-Creation.png)
 
-- Retrieve your connection credentials and update the config.json file with your new connection  credentials and actuator (LED) setting.
+- Retrieve your connection credentials and update the config.json file with your new connection credentials and actuator (LED) settings.
+
+```
+"IoTJumpWay": {
+    "Location": 0,
+    "Zone": 0,
+    "Device": 0,
+    "DeviceName" : "",
+    "App": 0,
+    "AppName": ""
+}
+```
 
 ```
 	"Actuators": {
@@ -84,25 +95,12 @@ First of all you need to connect up an LED to your Raspberry Pi. To connect the 
 ```
 
 ```
-	"IoTJumpWaySettings": {
-        "SystemLocation": 0,
-        "SystemZone": 0,
-        "SystemDeviceID": 0,
-        "SystemDeviceName" : "Your Device Name",
-        "SystemApplicationID": 0,
-        "SystemApplicationName" : "Your Application Name"
-	}
-```
-
-```
-	"IoTJumpWayMQTTSettings": {
-        "host": "https://iot.techbubbletechnologies.com",
-        "port": "8883",
-        "username": "Your Device MQTT Username",
-        "password": "Your Device MQTT Password",
-        "applicationUsername": "Your Application MQTT Username",
-        "applicationPassword": "Your Application MQTT Password"
-	}
+"IoTJumpWayMQTT": {
+    "MQTTUsername": "",
+    "MQTTPassword": "",
+    "AppMQTTUsername": "",
+    "AppMQTTPassword": ""
+}
 ```
 
 ## Execute The Programs
