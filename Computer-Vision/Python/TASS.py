@@ -1,13 +1,13 @@
 # *****************************************************************************
-# Copyright (c) 2016 TechBubble Technologies and other Contributors.
+# Copyright (c) 2016 and other Contributors.
 #
 # All rights reserved. This program and the accompanying materials
 # are made available under the terms of the Eclipse Public License v1.0
 # which accompanies this distribution, and is available at
-# http://www.eclipse.org/legal/epl-v10.html 
+# http://www.eclipse.org/legal/epl-v10.html
 #
 # Contributors:
-#   Adam Milton-Barker - TechBubble Technologies Limited
+#   Adam Milton-Barker - Limited
 # *****************************************************************************
 
 import cv2
@@ -19,22 +19,22 @@ import json
 
 from datetime import datetime
 
-import techbubbleiotjumpwaymqtt.device
+import JumpWayMQTT.Device as JWMQTTdevice
 from TASSCore import TassCore
 
 TassCore = TassCore()
 
 class TASS():
-	
+
 	def __init__(self):
-		
-		self.JumpWayMQTTClient = ""
+
+		self.jumpwayClient = ""
 		self.configs = {}
 		self.train = 0
-		
-		with open('config.json') as configs:
+
+		with open('required/config.json') as configs:
 			self.configs = json.loads(configs.read())
-			
+
 		self.startMQTT()
 
 		print("LOADING VIDEO CAMERA")
@@ -42,37 +42,36 @@ class TASS():
 		#self.OpenCVCapture = cv2.VideoCapture(0)
 		self.OpenCVCapture = cv2.VideoCapture('http://'+self.configs["StreamSettings"]["streamIP"]+':'+self.configs["StreamSettings"]["streamPort"]+'/stream.mjpg')
 
-		#self.OpenCVCapture.set(5, 30) 
+		#self.OpenCVCapture.set(5, 30)
 		#self.OpenCVCapture.set(3,640)
 		#self.OpenCVCapture.set(4,480)
-		
+
 	def deviceCommandsCallback(self,topic,payload):
-		
+
 		print("Received command data: %s" % (payload))
 		newSettings = json.loads(payload.decode("utf-8"))
-		
+
 	def startMQTT(self):
-		
+
 		try:
-			
-			self.JumpWayMQTTClient = techbubbleiotjumpwaymqtt.device.JumpWayPythonMQTTDeviceConnection({
-				"locationID": self.configs["IoTJumpWaySettings"]["SystemLocation"],  
-				"zoneID": self.configs["IoTJumpWaySettings"]["SystemZone"], 
-				"deviceId": self.configs["IoTJumpWaySettings"]["SystemDeviceID"], 
-				"deviceName": self.configs["IoTJumpWaySettings"]["SystemDeviceName"], 
-				"username": self.configs["IoTJumpWayMQTTSettings"]["username"], 
-				"password": self.configs["IoTJumpWayMQTTSettings"]["password"]
-			})
-			
+
+            self.jumpwayClient = JWMQTTdevice.DeviceConnection({
+                "locationID": self.configs["IoTJumpWay"]["Location"],
+                "zoneID": self.configs["IoTJumpWay"]["Zone"],
+                "deviceId": self.configs["IoTJumpWay"]["Device"],
+                "deviceName": self.configs["IoTJumpWay"]["DeviceName"],
+                "username": self.configs["IoTJumpWayMQTT"]["MQTTUsername"],
+                "password": self.configs["IoTJumpWayMQTT"]["MQTTPassword"]
+            })
+
 		except Exception as e:
 			print(str(e))
 			sys.exit()
-			
-		self.JumpWayMQTTClient.connectToDevice()
-		
-		self.JumpWayMQTTClient.subscribeToDeviceChannel("Commands")
-		self.JumpWayMQTTClient.deviceCommandsCallback = self.deviceCommandsCallback
-		
+
+        self.jumpwayClient.connectToDevice()
+        self.jumpwayClient.subscribeToDeviceChannel("Commands")
+        self.jumpwayClient.deviceCommandsCallback = self.deviceCommandsCallback
+
 TASS = TASS()
 model = cv2.face.createEigenFaceRecognizer(threshold=TASS.configs["ClassifierSettings"]["predictionThreshold"])
 model.load(TASS.configs["ClassifierSettings"]["Model"])
@@ -85,18 +84,18 @@ while True:
 		TassCore.processTrainingData()
 		TassCore.trainModel()
 		TASS.train=0
-			
+
 	elif(TASS.configs["AppSettings"]["armed"]==1):
-			
+
 		try:
-			
+
 			ret, frame = TASS.OpenCVCapture.read()
 			if not ret: continue
-			
+
 			currentImage,detected = TassCore.captureAndDetect(frame)
 			if detected is None:
 				continue
-				
+
 			image = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
 			x, y, w, h = detected
 			crop = TassCore.resize(TassCore.crop(image, x, y, w, h))
@@ -106,7 +105,7 @@ while True:
 
 				print("Person " + str(label) + " Confidence " +str(confidence))
 
-				TASS.JumpWayMQTTClient.publishToDeviceChannel(
+				TASS.jumpwayClient.publishToDeviceChannel(
 					"Sensors",
 					{
 						"Sensor":"CCTV",
@@ -119,7 +118,7 @@ while True:
 
 				print("Person not recognised " + str(label) + " Confidence "+str(confidence));
 
-				TASS.JumpWayMQTTClient.publishToDeviceChannel(
+				TASS.jumpwayClient.publishToDeviceChannel(
 					"Sensors",
 					{
 						"Sensor":"CCTV",
@@ -128,7 +127,7 @@ while True:
 					}
 				)
 
-				TASS.JumpWayMQTTClient.publishToDeviceChannel(
+				TASS.jumpwayClient.publishToDeviceChannel(
 					"Warnings",
 					{
 						"WarningType":"CCTV",
@@ -139,10 +138,10 @@ while True:
 				)
 
 			time.sleep(1)
-		
+
 		except cv2.error as e:
 			print(e)
 
 TASS.OpenCVCapture.release()
 cv2.destroyAllWindows()
-TASS.JumpWayMQTTClient.disconnectFromDevice()
+TASS.jumpwayClient.disconnectFromDevice()

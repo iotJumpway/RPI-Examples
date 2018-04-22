@@ -7,17 +7,13 @@
         "App": 0,
         "AppName": ""
     },
-    "Actuators": {
-        "LED": {
-            "ID": 0,
-            "PIN": 18
-        }
-    },
+    "Actuators": {},
+    "Cameras": {},
+    "Sensors": {},
 	"StreamSettings":{
 		"streamIP":"",
 		"streamPort":1234
 	},
-    "Sensors": {},
 	"IoTJumpWayMQTT": {
         "MQTTUsername": "",
         "MQTTPassword": "",

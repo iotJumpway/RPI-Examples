@@ -1,14 +1,14 @@
 # *****************************************************************************
-# Copyright (c) 2016 TechBubble Technologies and other Contributors.
+# Copyright (c) 2016 and other Contributors.
 #
 # All rights reserved. This program and the accompanying materials
 # are made available under the terms of the Eclipse Public License v1.0
 # which accompanies this distribution, and is available at
-# http://www.eclipse.org/legal/epl-v10.html 
+# http://www.eclipse.org/legal/epl-v10.html
 #
 # Contributors:
-#   Adam Milton-Barker - TechBubble Technologies Limited
-#   Andrej Petelin - TechBubble Technologies Limited
+#   Adam Milton-Barker - Limited
+#   Andrej Petelin - Limited
 # *****************************************************************************
 
 import numpy as np
@@ -22,12 +22,12 @@ from datetime import datetime
 
 class TassCore():
 
-    def __init__(self):	
+    def __init__(self):
 
-        with open('config.json') as configs:   
+        with open('required/config.json') as configs:
 
             self._configs = json.loads(configs.read())
-            
+
     def captureAndDetect(self,frame):
 
         faceCascade = cv2.CascadeClassifier( os.getcwd()+'/'+self._configs["ClassifierSettings"]["HAAR_FACES"])
@@ -72,7 +72,7 @@ class TassCore():
 
         else:
 
-            return frame, None   
+            return frame, None
 
     def resize(self,image):
 
@@ -161,7 +161,7 @@ class TassCore():
                         if not os.path.exists(processeddir+'/'+dirname):
                             os.makedirs(processeddir+'/'+dirname)
 
-                        
+
                         newFile=datetime.now().strftime('%Y-%m-%d-%H-%M-%S')+'.pgm'
 
                         cv2.imwrite(processeddir+'/'+dirname+"/"+newFile, cropped)
@@ -172,7 +172,7 @@ class TassCore():
                         os.remove(os.getcwd()+'/training/'+dirname+"/"+file)
                         print('REMOVED FILE')
         print("Finished Processing Training Data")
-        
+
     def trainModel(self):
 
         print("Training")

@@ -158,7 +158,14 @@ The next steps will be to setup your device instance in the IoT JumpWay Develope
 	"DeviceName" : "",
 	"App": 0,
 	"AppName": ""
-	}
+}
+```
+
+```
+"StreamSettings":{
+	"streamIP":"",
+	"streamPort":1234
+}
 ```
 
 ```
