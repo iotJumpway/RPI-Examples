@@ -57,7 +57,7 @@ You will need to clone this repository to a location on your Raspberry Pi 3. Nav
 
 ![IoT JumpWay Raspberry Pi Dev Kit IoT Alarm](../images/blinking.jpg)
 
-First of all you need to connect up an LED to your Raspberry Pi. To connect the LED you will need a breadboard, a 220 ohm resistor, and two jumper wires.
+First of all you need to connect up an LED to your Raspberry Pi.
 
 1. Connect your Grove IoT Dev Kit to your Raspberry Pi.
 2. Connect one of your LEDs to pin D5 on your Grove shield, this will be your **"OK"** status LED.
