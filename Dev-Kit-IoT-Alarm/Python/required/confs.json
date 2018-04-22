@@ -8,11 +8,11 @@
         "AppName": ""
     },
     "Actuators": {
-        "trueLED": {
+        "falseLED": {
             "ID": 0,
             "PIN": 5
         },
-        "falseLED": {
+        "trueLED": {
             "ID": 0,
             "PIN": 6
         },
