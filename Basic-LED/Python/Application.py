@@ -6,7 +6,7 @@
 
 import time, sys, json
 
-import JumpWayMQTT.Device as JWMQTTdevice
+import JumpWayMQTT.Application as JWMQTTapplication
 
 class Application():
 
@@ -24,7 +24,7 @@ class Application():
 
         try:
 
-            self.jumpwayClient = JWMQTTdevice.DeviceConnection({
+            self.jumpwayClient = JWMQTTapplication.ApplicationConnection({
                 "locationID": self.configs["IoTJumpWay"]["Location"],
                 "applicationID": self.configs["IoTJumpWay"]["App"],
                 "applicationName": self.configs["IoTJumpWay"]["AppName"],
