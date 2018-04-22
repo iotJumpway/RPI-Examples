@@ -9,7 +9,7 @@ import time, sys, json
 import RPi.GPIO as GPIO
 import JumpWayMQTT.Device as JWMQTTdevice
 
-class BasicLED():
+class Device():
 
     def __init__(self):
 
@@ -69,10 +69,10 @@ class BasicLED():
         self.jumpwayClient.subscribeToDeviceChannel("Commands")
         self.jumpwayClient.deviceCommandsCallback = self.deviceCommandsCallback
 
-BasicLED = BasicLED()
+Device = Device()
 
 while True:
 
     pass
 
-BasicLED.jumpwayClient.disconnectFromDevice()
+Device.jumpwayClient.disconnectFromDevice()

@@ -13,6 +13,7 @@
             "PIN": 18
         }
     },
+    "Cameras": {},
     "Sensors": {},
 	"IoTJumpWayMQTT": {
         "MQTTUsername": "",
