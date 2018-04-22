@@ -86,12 +86,12 @@ First of all you need to connect up an LED to your Raspberry Pi. To connect the 
 ```
 
 ```
-	"Actuators": {
-		"LED": {
-			"ID": 0,
-			"PIN": 18
-		}
-	}
+"Actuators": {
+    "LED": {
+        "ID": 0,
+        "PIN": 18
+    }
+}
 ```
 
 ```
