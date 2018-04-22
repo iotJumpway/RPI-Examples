@@ -105,8 +105,8 @@ First of all you need to connect up an LED to your Raspberry Pi. To connect the 
 
 ## Execute The Programs
 
-    $ sudo python/python3 Basic-Led-Device.py
-    $ sudo python/python3 Basic-Led-Application.py
+    $ sudo python/python3 Device.py
+    $ sudo python/python3 Application.py
 
 ## Viewing Your Data
 
